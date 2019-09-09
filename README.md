@@ -1,1 +1,3 @@
-formal-to-some-extent-notes
+# Strongly typed notes
+
+Notes for the Introduction to Formal Linguistics course @ GU. 
