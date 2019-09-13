@@ -1,3 +1,3 @@
 ebook:
-	pandoc formal_to_some_extent_notes.md -o formal_to_some_extent_notes.epub && \
-	mv formal_to_some_extent_notes.epub /home/harisont/Dropbox/Applicazioni/Dropbox\ PocketBook
+	pandoc formal-to-some-extent-notes.md -o formal-to-some-extent-notes.epub && \
+	mv formal-to-some-extent-notes.epub /home/harisont/Dropbox/Applicazioni/Dropbox\ PocketBook/formal-to-some-extent-notes.epub
