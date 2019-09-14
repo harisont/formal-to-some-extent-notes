@@ -61,6 +61,58 @@ There is a lot of speculation on the origin of language (but not a definitive ex
 - __tool making__ (based on the fact that the areas of the brain and brain activity involved in complex vocalisation and tool making are remarkably similar)
 - __genetic__ (__innateness hypothesis__)
 
+# Computational linguistics (aka NLP etc.)
+
+> Computational linguistics : Linguistics 
+> 	= 
+> NLP : CS 
+> 	= 
+> speech recognition : electrical engineering 
+> 	= 
+> computational psycholinguistics : psychology
+
+Natural Language Processing differs from other data processing tasks because it requires knowledge of language. One of the main problems is the __ambiguity__ of natural language (-> lexical and semantic disambiguation, probabilistic parsing). 
+
+## Tasks
+
+The objective of NLP is to make computers perform tasks involving natural language, e.g.:
+
+- improving human-human communication
+  - machine translation
+- enabling human-computer communication
+  - dialogue systems (aka conversational agents)
+  - web-based question answering (solved for yes/no and factoid questions)
+- performing text and/or speech processing
+  - TTS (Text To Speech)
+  - STT (Speech To text)
+  - grammar & spell checking
+
+## Tools
+
+- State machines
+- rule systems
+- probabilistic models & machine learning
+- vector-space models
+- predicate & first-order logic
+- classic search algorithms such as depth & breadth first search and A* search
+
+## Chronology
+
+- 1936: automata (Turing)
+- 1943: McCulloch-Pitts neuron
+- 1950: Turing test, first speech recognition systems (Bell Labs)
+- 1956: CFG (Chomsky) and other formal language theory
+- 1957-60: division into symbolic (formal languages + “classic” AI by McCarthy, Minsky etc.) & stochastic paradigm
+  - 1966: ELIZA (Emacs’ doctor)
+  - Logic Theorist (theorem prover)
+  - first online corpora
+- 1970s-90s: ulterior subdivision into four fields:
+  - stochastic paradigm
+  - logic-based paradigm -> logic programming
+  - natural language understanding (1972: SHRDLU)
+  - discourse modelling
+- 2000+: rise of machine learning 
+
 # Miscellaneous & my own thoughts
 
 - > noun, verb, adjective… : types = sentence, syntagm… : composition type (similar to types & function types?)
