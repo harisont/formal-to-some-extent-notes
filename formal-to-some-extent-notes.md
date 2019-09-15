@@ -48,6 +48,12 @@ Secondary subfields:
 - comparative linguistics & typology
 - (…)
 
+# Expression types
+
+- __Lexical expressions__: require the speaker to turn to the lexicon in order to express a particular nuance of meaning (e.g. _stem suppletion_: “go” -> “went” and _isomorphism_ -> in English the past tense of “hit” is still “hit”)
+- __morphological processes__: require to alter the form of a word in some predictable way
+- __syntactic patterns__: express meaning variations by combination and rearrangement of lexical items.
+
 # The origins of language
 
 There is a lot of speculation on the origin of language (but not a definitive explanation) - possible sources:
@@ -61,7 +67,9 @@ There is a lot of speculation on the origin of language (but not a definitive ex
 - __tool making__ (based on the fact that the areas of the brain and brain activity involved in complex vocalisation and tool making are remarkably similar)
 - __genetic__ (__innateness hypothesis__)
 
-# Computational linguistics (aka NLP etc.)
+---
+
+## Computational linguistics (aka NLP etc.)
 
 > Computational linguistics : Linguistics 
 > 	= 
@@ -121,8 +129,6 @@ The objective of NLP is to make computers perform tasks involving natural langua
 
 - not so easy to define what a native speaker is
 
----
-
 # Morphology
 
 > __Morphology__ = the study of words: what they are how they are formed and their different forms
@@ -143,14 +149,29 @@ In language technology, it is involved in:
 
 - _Lexeme_ = abstract lexical entity consisting of __form + meaning__. It represents a
   set of forms (note: this is according to the slides. I actually think that a better definition would be: “__basic unit of a language with *lexical meaning*__ consisting of one or several words, the elements of which do not separately convey the (lexical) meaning of the whole”)
+  
 - _Root_ = basic part of a lexeme not further analysable either in terms of inflectional or derivational morphology, always present in every form (note: compounds have two roots)
-- _Stem_
+
+- _Stem_ = a root or a root + a derivational morpheme changing its meaning (example: “deduce” is a stem but not a root, as it can be analysed in terms of “de” + “duce”)
+
 - _Lemma_ = basic form that represents the word e.g. in a dictionary
+
 - _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the bestämd form of a Swedish word or the past simple of an English verb)
+
 - _String_ = sequence of characters
+
 - _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). They are divided into:
   - _free_ (standalone) morphemes
-  - _bound_ morphemes: prefixes, suffixes, infixes, circumfixes. The _base_ of a word is the part to which bound morphemes are attached.
+  - _bound_ morphemes (the _base_ of a word is the part to which bound morphemes are attached): 
+    - roots
+    - affixes (prefixes, suffixes, infixes, circumfixes)
+    - clitics: depend on other words, their host word can belong to several classes of words. Example: “the”, “a”
+  
+  Can also be divided into:
+  
+  - _lexical_
+  - _grammatical_ (with one ore more meanings attached at the same time, cf. verb suffuxes in Spanish ans Italian. In this latter case they are called _portmanteau morphemes_)
+  
 - _Morph_ = A phonetic (and sometimes orthographic) representation of a morpheme. Different morphemes associated with the same meaning are called _allomorphs_. Examples:
   - the plural of the Swedish word “**fågel**” is “**fågl**ar”. “Fågel” and “fågl” are then allomorphs
   - “-s” and “-es” are allomorphs of the English plural morpheme
@@ -158,14 +179,14 @@ In language technology, it is involved in:
 ## Content vs function words
 
 - _Content words_: __words with a clear *lexical meaning*__ (nouns, verbs, adjectives. Note that these classes of words all are _open classes_, i.e. it is possible to add them new words)
-- _Function words_ : __words__ with no clear lexical meaning, __which__ instead __specify grammatical functions and relationships__ (conjunctions, prepositions, articles, pronouns)
+- _Function words_ : __words__ with no clear lexical meaning, __which__ instead __specify *grammatical functions* and relationships__ (conjunctions, prepositions, articles, pronouns. Note how they are all [almost: cf. “hen” in Swedish!] _closed classes_)
 
 The brain treats content and functions words differently! In fact:
 
 - Some aphasics are unable to read function words like “in” or “which”, but can read the lexical words “inn” and “witch”
-- In early stages of development children often omit function words
+- __In early stages of development children often omit function words
 
-## Word formation processes
+## Word formation (morphological) processes
 
 - _Coining_ (= making up new terms)
 - _Loan_ (from other languages): andante, oxymoron, balonvolea…
@@ -211,6 +232,16 @@ Languages are grouped into categories based on morphology:
 - what if there are multiple stems? (“vado”, “andare”)
 - function or content? (“stor-het” vs “stor-lek”)
 - what if identical morphs of the same lexeme indicate different morphemes? (e.g. Swedish adjectives terminate in “”-a” both in singular bestämd form and in plural obestämd form)
+
+## Relationship with other subfields of linguistics
+
+### Morphosyntax
+
+It’s often useful to talk about morphology and syntax together because some things are expressed morphologically in a language and syntactically in another.
+
+### Lexicon
+
+Lexicon should perhaps be considered alongside morphology and syntax. We shall define lexicon later on, but for now let’s just say that according to one possible (and rather broad) its “units”, called _lexical entries_ are idealised mental constructs such as the syntactic pattern “PREPOSITION + NOUN PHRASE” in English.
 
 ---
 
