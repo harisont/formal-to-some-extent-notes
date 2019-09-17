@@ -3,7 +3,7 @@
 
 # Introduction to Formal Linguistics
 
-- FL is only formal to some extent, so not as a binary notion linguistics. This is due to the fact that the object of study is natural language, which is ambiguous -> levels of “formalness”
+- FL is only formal to some extent, so not as a binary notion. This is due to the fact that the object of study is natural language, which is ambiguous -> levels of “formalness”
 - Precursors: 
 
   - Pāṇini (Sanskrit philologist, IV century BCE)
@@ -245,3 +245,104 @@ Lexicon should perhaps be considered alongside morphology and syntax. We shall d
 
 ---
 
+# Phonetics & phonology
+
+![The classical communication model](communication_model.png)
+
+## Phonetics
+
+> __Phonetics__ = the study of speech sounds from a _physical_ (not functional) point of view. It deals with both the _production_ (speech apparatus) and the _perception_ (auditory apparatus) of speech sounds. It is __language independent__.
+
+Only 2-300 sounds are needed to represents _all_ sounds in _all_ the 5000-8000 different languages across the world, and each language only selects a part of them (no more than 50).
+
+### Main subfields and methodologies
+
+| Subfield                   | Object                           | Experimental methods                                         |
+| -------------------------- | -------------------------------- | ------------------------------------------------------------ |
+| __articulatory__ phonetics | speech production, speaker       | electropalatography, x-rays, ultrasounds, physiological measurements of nasal and oral flow |
+| __acoustic__ phonetics     | speech acoustic, physical medium | waveform, spectrogram, spectra, intensity curves and pitch tracks analysis |
+| __perceptual__ phonetics   | perception, hearer               | eye tracking (for reading), identification & discrimination experiments with auditory stimuli |
+
+Other methods: qualitative studies, corpora-based studies.
+
+### Sound classification
+
+Sounds are classified based on the following aspects.
+
+#### Initiation
+
+- __airstream mechanism__:
+
+  | Mechanism name | Source of energy |
+  | -------------- | ---------------- |
+  | **pulmonic**   | lungs            |
+  | **glottalic**  | glottis          |
+  | **velaric**    | tongue           |
+
+- _airflow direction__:
+
+  - egressive
+  - ingressive (e.g. that weird sound that Swedes sometimes make instead of just saying “ja”)
+
+Inexhaustive classification based on initiation:
+
+| Sound type    | Characteristics      |
+| ------------- | -------------------- |
+| __ejective__  | glottalic egressive  |
+| __implosive__ | glottalic ingressive |
+| __click__     | velaric ingressive   |
+
+#### Phonation
+
+
+
+#### Articulation
+
+- place of articulation
+- degree of stricture
+- aspect of articulation
+
+#### Coordination
+
+
+
+### Consonants
+
+TODO: insert table
+
+TODO: resctucture everything
+
+- Bilabial: [p], [b], [m] in English
+- Dental: [θ] [ð]
+- Alveolar: [t], [d], [n], [z], [l]
+
+- Uvular
+- Pharingeal
+
+### Vowels
+
+TODO: classic pictures
+
+long vs short
+
+dipthongs
+
+## Prosody
+
+Stress, pitch accent, intonation.
+
+…
+
+## Phonology
+
+> __Phonology__ = study of the systematic, __language dependent__ aspects of sounds, like their distinctive functions.
+
+## Phonemes and allophones
+
+> Phoneme = minimal sound unit distinguishing meaning in a certain language. Not meaningful by themselves.
+>
+> - Allophone = variant of an phoneme that does not change the meaning -> è é in southern Italy
+>   substitution test, minimal pair if only one phoneme differs
+> - Phonotactics = how phonemes can be combined in a given language
+
+Phomemic (/…/, abstract) VS phonetic ([…], concrete, realistic) transcription
