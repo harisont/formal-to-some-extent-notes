@@ -423,12 +423,18 @@ Inexhaustive list of mentioned things:
 
 > __Phonology__ = study of the systematic, __language dependent__ aspects of sounds, like their distinctive functions.
 
-## Phonemes and allophones
+### Phonemes and allophones
 
-> Phoneme = minimal sound unit distinguishing meaning in a certain language. Not meaningful by themselves.
->
-> - Allophone = variant of an phoneme that does not change the meaning -> è é in southern Italy
->   substitution test, minimal pair if only one phoneme differs
-> - Phonotactics = how phonemes can be combined in a given language
+> __Phoneme__ = minimal sound unit distinguishing meaning in a certain language. Not meaningful by itself.
 
-Phomemic (/…/, abstract) VS phonetic ([…], concrete, realistic) ~~transcription~~
+An _allophone_ is a variant of an phoneme that does not change the meaning -> “è” and “é” in southern Italy -> _substitution test_, two words form a _minimal pair_ if they only differ by one phoneme
+
+### Phonotactics
+
+Phonotactics is a part of phonology which treats how different phonemes can be combined in a certain language (example: how many consonants can you have in a row?).
+
+## Transcriptions
+
+Do not confuse **phonetic transcriptions** (enclosed in […] and very close to the “actual pronunciation”) with **_phonemic_ transcriptions** (more abstract and phoneme based, enclosed in /…/).
+
+On top of this, there are _**graphemes**_, i.e. alphabetic characters of the various writing systems, sometimes enclosed in <…>. The study of the different writing systems is called _graphonomics_.
