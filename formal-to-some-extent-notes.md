@@ -11,7 +11,7 @@
   - XIX century: 
     - historical & diachronic perspective
     - Hermann Paul: compositionality (sentences are the sum of their parts, not quite true but useful)
-  - XX century: Saussure -> Synchronic (…)
+  - XX century: Saussure -> ~~Synchronic~~ (…)
 - Pioneer: __Noam Chomsky__ (mid 50s) - principal contributions:
   - Syntactic structures (using mathematical tools in language analysis)
   - Chomsky hierarchy
@@ -294,44 +294,130 @@ Inexhaustive classification based on initiation:
 
 #### Phonation
 
+Larynx (voice box) and vocal folds.
 
+Classification of consonants based on phonation (not valid for all languages):
+
+- voiced (e.g. [f]) - vocal cords vibrate
+- voiceless (e.g. [v]) - vocal cords do not vibrate
 
 #### Articulation
 
-- place of articulation
-- degree of stricture
-- aspect of articulation
+- _place_ of articulation:
 
-#### Coordination
+  - oral
 
+  - nasal
 
+  - active (i.e. moving) articulators: lower lip, tongue
 
-### Consonants
+  - passive articulators: upper lip and teeth, upper oral cavity, back wall of the pharynx…
 
-TODO: insert table
+    ##### Classification of some consonants based on phonation and articulation
 
-TODO: resctucture everything
+    | Group             | Consonant (IPA) | Phonation | Oral/nasal | Articulators                                                 |
+    | ----------------- | --------------- | --------- | ---------- | ------------------------------------------------------------ |
+    | **bilabial**      | [p]             | voiceless | oral       | the two lips (closed)                                        |
+    | **bilabial**      | [m]             | voiced    | nasal      | the two lips (closed)                                        |
+    | **labiodental**   | [v]             | voiced    | oral       | active: lower lip; passive: upper teeth                      |
+    | **dental**        | [θ]             | voiceless | oral       | active: tongue blade or tip; passive: upper teeth            |
+    | **alveolar**      | [t]             | voiceless | oral       | active: tongue blade or tip; passive: alveolar ridge         |
+    | **post-alveolar** | [ʃ]             | voiceless | oral       | active: tongue blade or tip; passive: area behind the alveolar ridge |
+    | **palatal**       | [c]             | voiceless | oral       | active: middle or back part of the tongue; passive: hard palate |
+    | **velar**         | [k]             | voiced    | oral       | active: back part of the tongue; passive: soft palate        |
+    | **uvular**        | [χ]             | voiced    | oral       | active: back part of the tongue; passive: uvula              |
+    | **pharyngeal**    | [ħ]             | voiceless | oral       | active: root of the tongue; passive: pharynx                 |
+    | **glottal**       | [h]             | voiceless | oral       | glottis                                                      |
 
-- Bilabial: [p], [b], [m] in English
-- Dental: [θ] [ð]
-- Alveolar: [t], [d], [n], [z], [l]
+    
 
-- Uvular
-- Pharingeal
+- _degree_ of stricture:
 
-### Vowels
+  - open approximation -> resonants
+  - close approximation -> fricatives
+  - complete closure -> stops
 
-TODO: classic pictures
+- _aspect_ of articulation
 
-long vs short
+  - _conformational_:
+    - oral VS nasal (again?)
+    - central VS lateral (another way to distinguish between resonants and fricatives)
+  - _topographical_ (tongue surface convex/concave):
+    - grooved (fricatives)
+    2. retroflex (stops, fricatives and resonants)
+    3. cupped (stops, fricatives and resonants)
+    4. withdrawn tongue root (resonants)
+    5. extented of the tongue tip (stops, fricatives, and resonants)
+    6. advancement of the tongue root (ATR) (stops, fricatives and
+    resonants)
+  - _transitional_ (steady/dynamic):
+    - flapped (stops, fricatives and resonants)
+    2. tapped (stops and fricatives)
+    3. trilled (stops and fricatives)
+    4. diphthongal (resonants)
+    5. triphthongal (resonants)
 
-dipthongs
+#### Co-ordination
+
+Co-ordination is represented via diacritics (not listed here) in the IPA.
+
+- __devoicing__ (partial, initial or final)
+- __release__ 
+- __plosion__ (oral, nasal, central, lateral)
+- __aspiration__
+- __affrication__ (stop + fricative)
+- __length__
 
 ## Prosody
 
-Stress, pitch accent, intonation.
+Stress, pitch accent, intonation…
 
-…
+## The International Phonetic Alphabet
+
+### Consonants in the IPA
+
+![Consonants in the IPA](IPA_cons.png)
+
+### Vowels in the IPA
+
+Vowels in the IPA are categorised based on:
+
+- **height** (close/open, referred to the position of the tongue)
+- **location** (front/central/back)
+- lip position (spread/neutral/rounded)
+
+![Vowels in the IPA](IPA_vowels.png)
+
+Where symbols appear in pairs, the one to the right represents a rounded vowel.
+
+Other characteristics of vowel sounds:
+
+- length
+- nasalisation
+
+#### Diphthongs
+
+> A **diphthong** is made of two adjacent vowels in the same syllables. The two vowelsusually have different _quality_.
+
+Types of diphthongs:
+
+- _falling_ or _descending_ (the vowel with higher prominence comes first) VS _rising_ or _ascending__ (the vowel with lower prominence comes first)
+- _closing_ (the more open vowel comes first) VS _opening_ (the more closed vowel comes first)
+- _centering_(the second vowel quality is more central)
+
+### Acoustics
+
+Inexhaustive list of mentioned things:
+
+- plosives/stops (again)
+- fricatives (again)
+- affricates (again)
+- trills
+- flaps
+- taps
+- nasals (again)
+- approximants (= glides)
+- laterals & rhotics (= liquids)
 
 ## Phonology
 
@@ -345,4 +431,4 @@ Stress, pitch accent, intonation.
 >   substitution test, minimal pair if only one phoneme differs
 > - Phonotactics = how phonemes can be combined in a given language
 
-Phomemic (/…/, abstract) VS phonetic ([…], concrete, realistic) transcription
+Phomemic (/…/, abstract) VS phonetic ([…], concrete, realistic) ~~transcription~~
