@@ -35,7 +35,7 @@ Main subfields:
   - acoustic (physics side of things)
 - **Phonology** (is about _patterns of sounds conveying a meaning_) -> phonemes, phonological rules
 - **Morphology** (= study of the different forms words have, no clear boundary with syntax, cf. compounding in German and Swedish)
-  - inflectional: about different forms in a paradigm, singular VS plural, feminine vs masculine…
+  - inflectional: about different forms in a paradigmrgb(20, 20, 20), singular VS plural, feminine vs masculine…
   - derivational: about how to create new words from existing ones (possibly in another category, e.g. adjectives from nouns)
 - **Syntax/Grammar** (= set of [formally expressed, assuming that natural language is context free] structural rules governing the composition of clauses, phrases and words)
 - **Semantics** (= study of the meaning) (uses propositional & first order logic, model theory (somehow closely related to set theory) and inference (formal & pragmatic, i.e. common sense inference)
@@ -66,8 +66,6 @@ There is a lot of speculation on the origin of language (but not a definitive ex
 - __physical adaptation__ (evolution of teeth, lips, tongue, larynx, pharynx and so on)
 - __tool making__ (based on the fact that the areas of the brain and brain activity involved in complex vocalisation and tool making are remarkably similar)
 - __genetic__ (__innateness hypothesis__)
-
----
 
 ## Computational linguistics (aka NLP etc.)
 
@@ -243,7 +241,84 @@ It’s often useful to talk about morphology and syntax together because some th
 
 Lexicon should perhaps be considered alongside morphology and syntax. We shall define lexicon later on, but for now let’s just say that according to one possible (and rather broad) its “units”, called _lexical entries_ are idealised mental constructs such as the syntactic pattern “PREPOSITION + NOUN PHRASE” in English.
 
----
+## Computational morphology
+
+### Regular expressions
+
+> Regular expressions (regex) are an algebraic notation for characterising sets of strings. 
+
+They are made of _atomic symbols_ (lowercase Latin letters) and operations. The fundamental ones are:
+
+- __concatenation__ (no symbol: two expressions one next to the other are concatenated)
+- __Kleene closure__ (denoted by `*`)
+
+There are also some more specific useful operators (there are actually various conventions though):
+
+| Operator | Meaning                                                      |
+| -------- | ------------------------------------------------------------ |
+| `?`      | the preceding character or nothing                           |
+| `*`      | 0+ occurrences of the previous characters (well, this is just Kleenee) |
+| `+`      | 1+ occurrences of the previous character                     |
+| `.`      | whatever single character                                    |
+| `^`      | start of the line (e.g. `^ the` mathces lines starting with “the”) |
+| `$`      | end of the line                                              |
+| `\d`     | any digit                                                    |
+| `\D`     | any non-digit                                                |
+| `\w`     | any alphanumeric character                                   |
+| `\W`     | any non-alphanumeric character                               |
+| `\s`     | whitespace                                                   |
+| `\S`     | non-whitespace                                               |
+| `|`      | logical or (usage: like `^`)                                 |
+| `()`     | precedence (e.g. `(y|ies)`)                                  |
+
+#### Brackets
+
+Some examples to illustrate the usage of the `[]` operator:
+
+| Example expression | Matched characters |
+| ------------------ | ------------------ |
+| [Aa]               | A, a               |
+| [A-Z]              | A, …, Z            |
+| [0-9]              | 0, …, 9            |
+| [a-z]              | a, …, z            |
+| [0-9 A-Z]          | 0, …, 9, a, …, z   |
+
+### Finite-state automata
+
+FSA are _directed graphs_ where nodes represent *states* and arcs, labelled with symbols, represent transitions.
+
+They can also be represented as _transition tables_ (see example below).
+
+More formally (but only to some extent because we haven’t defined everything),
+
+> A FSA is a 5-uple
+> $$
+> <Q, \Sigma, q_0, F, \delta>
+> $$
+> where:
+>
+> - $Q$ is the set of states
+> - $\Sigma$ is the (finite) _alphabet_
+> - $q_0$ is the _start state_
+>
+> - $F \subseteq Q$ is a set of _final states_ (aka _accept states_)
+> - $\delta : Q \times \Sigma \to Q$ is a transition function between states
+
+#### Example
+
+- $Q = {q_0, q_1}$
+- $\Sigma = {a,b}$
+- $q_0 = q_0$ (oh well!)
+- $F = {q_1}$
+- transition function (as a transition table): TODO
+
+![Example of a FSA.](FSA.png)
+
+### Relationship between FSA, regular languages and regex
+
+- regex _denote_ regular languages
+- regex _compile into_ FSA
+- FSA _accept_ (but also, from another point of view, _generate_)  regular languages
 
 # Phonetics & phonology
 
