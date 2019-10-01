@@ -243,6 +243,21 @@ Lexicon should perhaps be considered alongside morphology and syntax. We shall d
 
 ## Computational morphology
 
+### Formal languages
+
+> A _formal language_ is a set of strings, each composed of symbols from a finite set of symbols referred to as _alphabet_.
+
+### Regular languages
+
+A formal definition of regular languages:
+
+- $\empty$ is a RL
+- $\forall a \in \Sigma \cup \epsilon, {a}$ is a RL
+- if $L_1$ and $L_2$ are regular languages, then so are
+  - $L_1 \cdot L_2 = {xy | x \in L_1, y \in L_2}$ (_concatenation_)
+  - $L_1 \cup L_2$ (_union_ or _disjunction_)
+  - $L_1*$ (and $L_2*$) (_Kleene closure_)
+
 ### Regular expressions
 
 > Regular expressions (regex) are an algebraic notation for characterising sets of strings. 
@@ -310,15 +325,92 @@ More formally (but only to some extent because we haven’t defined everything),
 - $\Sigma = {a,b}$
 - $q_0 = q_0$ (oh well!)
 - $F = {q_1}$
-- transition function (as a transition table): TODO
+- transition function: $\delta(q,i) = {q_0 \to q_0, q_0 \to q_1, q_1 \to q_0, q_1 \to q_1}$
 
 ![Example of a FSA.](FSA.png)
+
+#### ε-transitions
+
+A _nondeterministic_ FSA may have ε-transitions, i.e. transitions wirthout a corresponding symbol. NFAs with ε-transitions can effectively be converted to deterministic ones (DFAs). This means that they may be simpler to construct, but they are no more powerful than mere DFAs.
 
 ### Relationship between FSA, regular languages and regex
 
 - regex _denote_ regular languages
 - regex _compile into_ FSA
 - FSA _accept_ (but also, from another point of view, _generate_)  regular languages
+
+#### Recognition
+
+> _Recognition_ is defined as:
+>
+> - the process of determining if a string should be accepted by an automaton
+> - the process of determining if a string is in the language we’re defining with the automaton
+> - the process of determining if a regular expression matches a string.
+
+In _On computable numbers_ (A. Turing), recognition is described as the process of executing a tape divided into cells, using a read/write head (_Turing machine_). 
+
+![A Turing machine](tape.jpeg)
+
+Such a machine is _universal_ for all unambiguous regular languages. This means that in order to change the behavior of the machine it suffices to change the tape (i.e. the program).
+
+It works as follows:
+
+1. Start from the initial state
+2. Examine the current input (= read the symbol current cell)
+3. Consult the _symbol table_
+4. Go to a new state according to what the table says
+5. …
+6. Until the tape ends
+
+If, at any point in time, there is always only one thing to do, recognising is said to be _deterministic_ (simple table-driven interpreter. This concepts applies directly to automata as well, and given a NFA (where “N” stands for “Non-deterministic”) it is always possible to algorithmically construct an equivalent DFA (where “D” stands for “Deterministic”). There are, then, two main approaches to recognition:
+
+- Convert a NFA to a DFA and use the latter to perform recognition (__deterministic recognition__)
+- Explicitly manage recognition as a _state-space search_ (__non-deterministic recognition__), leaving the machine be a DFA. In __state-space search__, states are pairs $(pos, state)$, where $pos$ is the a tape position and $state$ is a state number, operators are compiled into the table and a goal state is a pair where the first element is the final tape position and the second element is a final state. Note that in a NFA there is at least a path from the initial state to a final state for each string in the language (finding such path means successful recognition!), but that doesn’t mean that all paths corresponding to that string end in a final state, so it is useful to have some backup strategy, such as marking choice points (**backtracking**). Other useful techniques are **look-ahead**, **parallelism**.
+
+#### From regex to FSA (syntheses)
+
+See “Sintesi” in LFC notes by Arturo Carpi.
+
+### FST (Finite State Transducers)
+
+A FST is a finite-state machine with _two_ memory tapes (an input tape and an output tape). It is, then, a generalisation of a FSA, which is single-taped: a FSA defines a formal language by defining a set of accepted strings, while a FST defines _relations between sets of strings_, i.e. it __maps between two sets of symbols__.
+
+In terms of graphs, the difference between FSA and FST is that in FST arcs are labelled with _pairs_ of symbols.
+
+More formally,
+
+> A FSA is a 7-uple
+> $$
+> <Q, \Sigma, \Delta, q_0, F, \delta, \sigma>
+> $$
+> where every element is defined as in FSAs excepts:
+>
+> - $\Sigma$ is the (finite) __input__ alphabet
+> - $\Delta$ is the (finite) __output__ alphabet
+> - $\sigma : Q \times \Sigma \to \Delta$ (not entirely sure I got the type right) is the _output function_, which gives the set of possible output strings for each state and input
+
+Such a machine is useful to build _morphological parsers_. They require:
+
+- a lexicon, for instance:
+  - cat N
+  - watch V
+  - mouse N
+  - clear
+- morphotactics, for instance [un] + adjective + [er] as in clear, unclear, clearer
+- orthographic rules, for instance inserting “e” before “s” in the third person of “watch”
+
+#### Regular relations and regular expressions
+
+I don’t see the point (yet). There are a few slides apparently just to say that regular relations are in a way similar to regular expression, but they establish correspondences between the two languages, for some reason called upper and lower language.
+
+### Why finite-state computing?
+
+- Computationally efficient for many NLP tasks:
+  - tokenization
+  - lemmatization
+  - morphological analysis (morphological parsing, disambiguation)
+  - inflectional & derivational morphology (example: nominalization of verbs)
+- bidirectional (allows both analysis and synthesis)
 
 # Phonetics & phonology
 
@@ -513,3 +605,99 @@ Phonotactics is a part of phonology which treats how different phonemes can be c
 Do not confuse **phonetic transcriptions** (enclosed in […] and very close to the “actual pronunciation”) with **_phonemic_ transcriptions** (more abstract and phoneme based, enclosed in /…/).
 
 On top of this, there are _**graphemes**_, i.e. alphabetic characters of the various writing systems, sometimes enclosed in <…>. The study of the different writing systems is called _graphonomics_.
+
+# Semantics
+
+Has to do with syntax, morphology and pragmatics.
+
+_Compositional_ semantics deals with meaning of well formed sentences (not the same as pragmatics where the “well formed” part is not that important). More precise distinction: same as competence VS performance, even though there is a strong relationship between the two.
+
+## Lexical relations between words
+
+We define meanings in terms of other words, e.g.:
+
+- Spaniel: type of _dog_ (hyponymy)
+- Dark: opposite of _light_ (antonymy)
+- Honest: same as _truthful_ (synonymy)
+- Yellow: color, just like _green_ (hyponymy)
+
+### Synonymy
+
+> Two words are _synonyms_ if their meanings are closely related.
+
+Synonyms don’t necessarily have the same stylistic value. 
+
+![Talking drawings concerning the stylistic value of synonyms.](strange.png)
+
+Also, two words can be synonyms in one context but not another (which is troublesome in machine translation).
+
+### Antonymy
+
+> Two words with opposite meaning are called antonyms.
+
+Some words are gradable, so, so to say “double negation does not hold” (in a way). The non-gradable ones have no comparatives.
+
+- _reversives_ (doing and undoing of something: open-close, pack-unpack)
+- _converses_ (same event from different perspectives: over-under, parent-child)
+
+### Hyponymy - hyperonymy
+
+> Inclusion relationship
+
+Waltzing -> dancing -> moving
+
+### Homophony
+
+> Two words with the same pronunciation
+
+### Homonymy
+
+> Identical words with different unrelated meanings
+
+Examples: pupil, space, bank
+
+### Polysemy
+
+> Words with the same form and related meanings
+
+Example:
+
+- Head of a person/of a company
+
+Often result of metaphorical language.
+
+### Metonymy
+
+Based on closeness & relatedness in a Context.
+
+Example: “ha finito la bottiglia” (l’acqua nella bottiglia), “non ci sono notizie da Palazzo Chigi” (dal governo), “Legni non suonate” (strumenti di legno).
+
+## Semantic features
+
+Words can be described in terms of the qualities essential to their referents. Such qualities can be combined with syntax rules to form a grammar so not to form sentences like: “the carpet ate a sandwich” (this may or may not be a good idea).
+
+Example: animate/inanimate, gender…
+
+## Prototypes
+
+> A _prototype_ is a “central member” of a semantic field.
+
+Very intuitive and very dangerous, for example, what’s the prototype of a human?
+
+## Thematic roles (aka $\theta$-rules)
+
+### Agent
+
+- initiates an action conciously, based on free will (“_the dog_ chasedthe cat”)
+
+### Theme
+
+- Someone/something that have a postion or direction
+- Entity affected by an action or described in a sentence
+- If human (rare) usually passive is used
+
+### Patient
+
+Very similar to theme (not always distinguished f), but its state changes.
+
+Slides: up to intrument and experiencer
