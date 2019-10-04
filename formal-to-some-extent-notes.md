@@ -606,6 +606,55 @@ Do not confuse **phonetic transcriptions** (enclosed in […] and very close to 
 
 On top of this, there are _**graphemes**_, i.e. alphabetic characters of the various writing systems, sometimes enclosed in <…>. The study of the different writing systems is called _graphonomics_.
 
+# Syntax
+
+> __Syntax__ is the study of the structure of sentences, i.e. of the principles, _both universal and language specific_, that govern how words are assembled to yield grammatical
+> sentences.
+
+This means that syntax operates on the level of words (or higher) and that its product is a grammar (i.e. a set of rules that approximate human linguistic intuition, i.e. their _linguistic competence_, valid strings in a language - formal syntax does so formally, using formal grammars and/or other formalisms), where rules are abstracted from linguistic evidence (__human *performance*__).
+
+Even if (most linguist think that) natural languages are not formal, formal syntax is still an useful tool to analyse them.
+
+## Generative grammars (Chomsky) 
+
+Main principles:
+
+- formality
+- aim to be a theory of human linguistic ability (discussable!). Assumptions:
+  - there exists universal grammar (UG) innate to humans. Variations between languages are parameters set during language acquisition
+  - syntactic processes are central in human language production & understanding and in reasoning
+
+## Formal grammars
+
+> A _formal grammar_ is a 4-uple $(\Sigma, N, P, S)$ where
+>
+> - $\Sigma$ is a finite set of __terminal symbols__ (denoted by small latin letters + $\epsilon$, the empty string)
+> - $N$ is a finite set of __non-terminal__ (aka __variable__) __symbols__ (denoted by capital latin letters)
+> - $P$ is a finite set of __production rules__ in the form $left \to right$, where both $left$ and $right$ are sequences of elements belonging to the two sets above
+> - $S \in N$ is a __start symbol__
+
+_Derivation_ consists in starting from $S$ and applying rules by replacing symbols on their $left$ sides with symbols on the respective $right$ sides, stopping when there are no more variables.
+
+### Chomsky hierarchy
+
+Increasing the power of the production rules yields different “levels” of formal grammars (note: greek letters stand for something that is either a variable or a terminal):
+
+| Grammar type | Language                               | Production rules allowed                 |
+| ------------ | -------------------------------------- | ---------------------------------------- |
+| 0            | recursively enumerable (unrestrictive) | $\alpha \to \beta$                       |
+| 1            | context sensitive                      | $\alpha A \beta \to \alpha \gamma \beta$ |
+| 2            | context free                           | $A \to \gamma$                           |
+| 3            | regular                                | $A \to a$ and $A \to aB$                 |
+
+## Words, aka terminal symbols, aka Parts Of Speech (POS)
+
+How to affirm that there are different classes of words and how to then classify words? The _semantic criteria_ would not get us far, ending up in a long enumeration of possibilities (e.g. “a noun is a place, an object or a person”). On the other end, the __*distributional criteria*__ are more useful:
+
+- __morphological distribution__: what kind of affixes can a word take?
+  - inflectional
+  - derivational
+- __syntactic distribution__: what kind of words appear around a word?
+
 # Semantics
 
 Has to do with syntax, morphology and pragmatics.
