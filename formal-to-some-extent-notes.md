@@ -416,6 +416,17 @@ I don’t see the point (yet). There are a few slides apparently just to say tha
 
 ![The classical communication model](communication_model.png)
 
+## Some anatomy
+We call _vocal tract_ what comprises the various parts of the body used to produce speech sounds. It is interesting to notice that each of these body parts has its own biological function and its adaptation for speaking is only seconda, so there is no such thing as "the organ of speech". 
+
+TODO: add images from book (general and larynx).
+
+### Tools
+- Autopsy (oh well...)
+- X-rays (no tongue)
+- sonography (technique used for _in utero_ images)
+- MRI (Magnetic Resonance Imaging)
+
 ## Phonetics
 
 > __Phonetics__ = the study of speech sounds from a _physical_ (not functional) point of view. It deals with both the _production_ (speech apparatus) and the _perception_ (auditory apparatus) of speech sounds. It is __language independent__.
