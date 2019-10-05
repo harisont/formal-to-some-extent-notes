@@ -670,9 +670,45 @@ How to affirm that there are different classes of words and how to then classify
 
 # Semantics
 
-Has to do with syntax, morphology and pragmatics.
+> Semantics is the study of linguistic meaning and interpretation of linguistic expressions.
+
+It has to do with syntax, morphology and pragmatics.
 
 _Compositional_ semantics deals with meaning of well formed sentences (not the same as pragmatics where the “well formed” part is not that important). More precise distinction: same as competence VS performance, even though there is a strong relationship between the two.
+
+## Some key concepts
+
+### Utterance VS sentence
+
+> __Utterance__ = unrepeatable speech/writing event that happens at a particular point in time, speech or writing event intended as a physical event.
+
+> __Sentence__ = linguist’s abstraction from an utterance
+
+This distinction is fundamental, as language is always produced in context, and this context affects meaning. As an example, think of how the meaning of the sentence “I’d like a glass of water” varies if produced in a restaurant (command) or during a hike (desire).
+
+### Intention VS extension (Carnap)
+
+> __Intention__: similar to the meaning one can find in a dictionary, it is the set of properties that allow to specify which objects belong to a certain _extension_
+
+> __Extension__: set of real world objects a word can refer to.
+
+### Sense VS reference (Frege)
+
+> __Sense__: the thought that a sentence expresses
+
+> __Reference/referent__: truth value or denoted set
+
+My personal thought is that these definitions are extremely unclear. The concept is better (but not that much better) understood by example:
+
+- “The evening star”:
+  - sense: the concept of a star that appears first in the evening
+  - reference: Venus
+- “Is Italian”:
+  - sense: the concept of being Italian
+  - reference: a set of all individuals who are Italian
+- “Pavarotti is Italian”:
+  - sense: the thought/proposition that Pavarotti is Italian
+  - reference: True
 
 ## Lexical relations between words
 
@@ -742,24 +778,20 @@ Example: animate/inanimate, gender…
 
 ## Prototypes
 
+Another way to describe meaning is to do so via prototypes.
+
 > A _prototype_ is a “central member” of a semantic field.
 
-Very intuitive and very dangerous, for example, what’s the prototype of a human?
+This is very intuitive and very dangerous: for example, what’s the prototype of a human?
 
 ## Thematic roles (aka $\theta$-rules)
 
-### Agent
+Finally, meaning can be described via thematic roles, that focus on the relations between parts of speech. Here are some of the most important _roles_:
 
-- initiates an action conciously, based on free will (“_the dog_ chasedthe cat”)
+- __agent__: it initiates an action, usually consciously. Example: “_the dog_ chased the cat”
 
-### Theme
+- __theme__: an entity which is affected by an action or described, typically non-human. Examples: “_The ball_ was blue”, “Sam threw _the ball_” 
 
-- Someone/something that have a postion or direction
-- Entity affected by an action or described in a sentence
-- If human (rare) usually passive is used
-
-### Patient
-
-Very similar to theme (not always distinguished f), but its state changes.
-
-Slides: up to intrument and experiencer
+- __patient__: very similar to and not always distinguished from theme, its state changes. Example: “She closed _the window_”
+- __instrument__: entity used to do something. Example: “He signed the contract with _a quill_”
+- __experiencer__: someone who knows/feels something. Example: “_I_ felt sad”.
