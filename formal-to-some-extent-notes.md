@@ -1,6 +1,8 @@
 % Formal-to-some-extent notes
 % Arianna Masciolini
 
+###### tags: `uni`
+
 # Introduction to Formal Linguistics
 
 - FL is only formal to some extent, so not as a binary notion. This is due to the fact that the object of study is natural language, which is ambiguous -> levels of “formalness”
