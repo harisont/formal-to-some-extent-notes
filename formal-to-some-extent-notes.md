@@ -674,8 +674,6 @@ How to affirm that there are different classes of words and how to then classify
 
 It has to do with syntax, morphology and pragmatics.
 
-_Compositional_ semantics deals with meaning of well formed sentences (not the same as pragmatics where the “well formed” part is not that important). More precise distinction: same as competence VS performance, even though there is a strong relationship between the two.
-
 ## Some key concepts
 
 ### Utterance VS sentence
@@ -709,6 +707,25 @@ My personal thought is that these definitions are extremely unclear. The concept
 - “Pavarotti is Italian”:
   - sense: the thought/proposition that Pavarotti is Italian
   - reference: True
+
+### But what does _meaning_ even mean?
+
+So far, the key concept of _meaning_ (which is after all the object of semantics). About this there are two types of theories:
+
+- **referential theories**, where meaning is what links linguistic expressions and real-words objects, events, situations (cfr. extension, reference). Theories of this kind lead to **truth conditional semantics**:
+  - advantages: provide an explanation of what meaning is - language corresponds to real-world situations
+  - drawbacks: semantics of hypothetical situations, all true propositions just mean “True”
+- **cognitive theories**, where meaning is the link between linguistic expressions and human mental constructs (cfr. intension, sense)
+  - advantages: allow to talk about hypothetical situations and to communicate our internal experience
+  - disadvantage: non rigorous, informal way to describe mental structures etc.
+
+## Compositional semantics
+
+_Compositional_ semantics deals with meaning of well formed _sentences_ (not the same as pragmatics where the “well formed” part is not that important). More precise distinction: same as competence VS performance, even though there is a strong relationship between the two. 
+
+The __principle of compositionality__ is the following:
+
+> The meaning of a complex expression is determined by the meanings of its constituent expressions and the rules used to combine them
 
 ## Lexical relations between words
 
@@ -789,9 +806,38 @@ This is very intuitive and very dangerous: for example, what’s the prototype o
 Finally, meaning can be described via thematic roles, that focus on the relations between parts of speech. Here are some of the most important _roles_:
 
 - __agent__: it initiates an action, usually consciously. Example: “_the dog_ chased the cat”
-
 - __theme__: an entity which is affected by an action or described, typically non-human. Examples: “_The ball_ was blue”, “Sam threw _the ball_” 
-
 - __patient__: very similar to and not always distinguished from theme, its state changes. Example: “She closed _the window_”
 - __instrument__: entity used to do something. Example: “He signed the contract with _a quill_”
 - __experiencer__: someone who knows/feels something. Example: “_I_ felt sad”.
+
+## Formal semantics
+
+### Timeline
+
+1. 60s, UCLA: R. Montague, philosopher, starts applying formal logic to semantics (Montague grammar, Montague semantics). B. Partee, linguist, introduces this approach to linguists
+2. 70s and 80s: FS becomes a well established research area
+3. 90s and beyond: P. Blackburn and J. Bos develop various computational approaches to the subject
+
+### Denotation
+
+Names and noun phrases _denote_ denotation, denotatum, reference or semantic value (?).
+
+Example: “Marco Aurelio” denotes a certain person named like this.
+
+It can be quantified (cf. first order logic quantifiers); in that case the interaction with negation is sometimes interesting (e.g. in Italian). To study denotation we can also use truth tables.
+
+### Inference
+
+We can model _entailment_ like in formal logic. For example, from “The Queen of the UK is wearing a hat” follows “Someone is wearing a hat” (but also: “The UK is a monarchy” - which is a _presupposition_ - and so on).
+
+#### Types of presupposition
+
+- __Existential__: “The Queen of the UK is wearing a hat” <- “There exists a Queen of England”
+- **Aspectual**: “I just stopped reading” <- “I have been reading”
+- **Iterative**: “He returned to Cambridge” <- “He had been in Cambridge before” or “He said no again” <- “He already had said no”
+- **Implicative**: “Kokoro Fuji managed to top the boulder” <- “He was trying to top the boulder”
+
+#### Conversational implicature
+
+Pseudo-inference from inexact/incomplete information. Example: “Are you planning to be at school for lunch?” “I have to go to class in the morning and then I have a meeting at 2:30 pm” “_See you in the canteen, then_”.
