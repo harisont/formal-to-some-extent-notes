@@ -659,6 +659,26 @@ Increasing the power of the production rules yields different “levels” of fo
 | 2            | context free                           | $A \to \gamma$                           |
 | 3            | regular                                | $A \to a$ and $A \to aB$                 |
 
+### Context free grammars
+(Example rules: see slides 28-30.)
+
+Properties of CFGs:
+- a phrase can be applied independently of its context(no context on the LHS of rules; this it what it means for a grammar to be context free)
+- a phrase has its internal structure (RHS of rules)
+- phrases cannot be discontinued nor overlap
+- phrases are either disjoint or contain one another
+- recursive application of rules is allowed (as in XP → Y XP)
+
+Properties that CFGs _do not_ have but that are required to be able to model language:
+- phrases have heads (terminal symbols) that determine their category
+- heads can be modified by other phrases (modifiers)
+- selectional restrictions on constituents:
+  - agreement (which depends exactly on the context)
+  - sub-categorization (note: the example in the slide is "Alex liked *(the park)"; I don't get why it should be incorrect)
+- arbitrary rules of specific languages (like mandatory subject: "_it_ rains")
+- sentences have to have a sensible meaning: "*(The tree climbed up Alex)".
+
+
 ## Words, aka terminal symbols, aka Parts Of Speech (POS)
 
 How to affirm that there are different classes of words and how to then classify words? The _semantic criteria_ would not get us far, ending up in a long enumeration of possibilities (e.g. “a noun is a place, an object or a person”). On the other end, the __*distributional criteria*__ are more useful:
@@ -667,6 +687,35 @@ How to affirm that there are different classes of words and how to then classify
   - inflectional
   - derivational
 - __syntactic distribution__: what kind of words appear around a word?
+
+### Types of POS
+
+How many and what parts of speech there are depends on the language and the grammar we intend to build. Some common choices are:
+- Nouns (divided into proper and common, countable and uncountable...)
+- Verbs (divided into transitive, intransitive and ditransitive)
+- Adjectives
+- Adverbs
+- Pronouns ans anaphora (e.g. itself)
+- Determiners (e.g. articles and numerals)
+- Prepositions
+- Complementizers (e.g. that, for, if...)
+- Conjunctions
+- Negations
+- Auxiliaries (is, do, have, to)
+- Modal verbs (will, would, shall, should, can, could)
+
+Finer distinctions (e.g. tenses for verbs), aka features in theoretical grammars, can be found in the Penn Treebank set.
+
+## Phrases, aka non-terminal symbols
+Words associate with certain other words and form units. In order to find the constituents of a sentence, we can make use of several __tests for constituency__:
+- replacement: try to replace a unit with a similar one
+- sentence fragment:
+- coordination: try to conjoin units
+- displacement.
+
+### Phrase structure
+We can represent the hierarchical structure of sentences via bracketing or trees.
+
 
 # Semantics
 
