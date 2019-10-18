@@ -669,15 +669,43 @@ Properties of CFGs:
 - phrases are either disjoint or contain one another
 - recursive application of rules is allowed (as in XP → Y XP)
 
+#### Limitations and potential solutions
+
 Properties that CFGs _do not_ have but that are required to be able to model language:
 - phrases have heads (terminal symbols) that determine their category
 - heads can be modified by other phrases (modifiers)
 - selectional restrictions on constituents:
-  - agreement (which depends exactly on the context)
-  - sub-categorization (note: the example in the slide is "Alex liked *(the park)"; I don't get why it should be incorrect)
-- arbitrary rules of specific languages (like mandatory subject: "_it_ rains")
-- sentences have to have a sensible meaning: "*(The tree climbed up Alex)".
+  - __agreement__ (which depends exactly on the context - person, number, tense, quantifiers...)
+  - __sub-categorization__ (note: the example in the slide is "Alex liked *(the park)"; I don't get why it should be incorrect)
+- __arbitrary rules of specific languages__ (like mandatory subject: "_it_ rains")
+- sentences have to have a sensible __meaning__: "*(The tree climbed up Alex)".
 
+Potential solutions:
+- As for __agreement__, it is possible to encode the agreement information in CFG rules (a solution which is in part similar to an annotating type checker)
+- As for __sub-categorization__, we can take a general rule and split it into a set of more specific rules. For example, if we had a general rule for verb phrases, we could instead see verbs as predicates and generate different rules for:
+  - verbs with no arguments ("rain")
+  - verbs with an agent argument (aka intransitive verbs, e.g. "sneeze")
+  - verbs with a theme argument (aka un-accusative verbs, e.g. "fall")
+  - verbs with an agent and theme argument (aka transitive verbs, e.g. "kiss")
+  - verbs with an agent, a theme and a goal argument (e.g. "give", as in "I gave a present to her")
+  - verbs with an agent and a proposition argument (aka factive verbs, e.g. "say" as in "He said that he enjoyed the concert")
+  - ... (cf. thematic roles in the chapter on Semantics)
+- Again for __sub-categorization__, we can take into account the core frame elements for communication:
+  - communicator
+  - medium
+  - message
+  - topic
+  - addressee
+  - amount of information
+  - duration
+  - frequency
+  - ...
+
+##### Feature structures
+
+In general, when it comes to representing constraints, instead of introducing a whole lot of new rules we can use __*feature structures*__.
+
+In particular, we represent each node of our CFG as a feature structure, to which we can add constraints. We can perform unification (⊔) on such feature structures (for a graphical - matrix - representation of such features, see syntax 2 slides 26+).
 
 ## Words, aka terminal symbols, aka Parts Of Speech (POS)
 
@@ -715,7 +743,6 @@ Words associate with certain other words and form units. In order to find the co
 
 ### Phrase structure
 We can represent the hierarchical structure of sentences via bracketing or trees.
-
 
 # Semantics
 
