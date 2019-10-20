@@ -51,12 +51,6 @@ Secondary subfields:
 
 ## The origins of language
 
-- __Lexical expressions__: require the speaker to turn to the lexicon in order to express a particular nuance of meaning (e.g. _stem suppletion_: “go” -> “went” and _isomorphism_ -> in English the past tense of “hit” is still “hit”)
-- __morphological processes__: require to alter the form of a word in some predictable way
-- __syntactic patterns__: express meaning variations by combination and rearrangement of lexical items.
-
-# The origins of language
-
 There is a lot of speculation on the origin of language (but not a definitive explanation) - possible sources:
 
 - __divine__ (cf. Genesis & Hindu traditions) -> numerous vain attempts to rediscover the (only) original divine language (before Babel)
@@ -115,14 +109,6 @@ The objective of NLP is to make computers perform tasks involving natural langua
   - natural language understanding (1972: SHRDLU)
   - discourse modelling
 - 2000+: rise of machine learning 
-
-# Miscellaneous & my own thoughts
-
-- > noun, verb, adjective… : types = sentence, syntagm… : composition type (similar to types & function types?)
-
-- language differ only to some extent -> **real & statistical _language universals_**
-
-- not so easy to define what a native speaker is
 
 # Morphology
 
