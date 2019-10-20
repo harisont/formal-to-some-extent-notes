@@ -131,33 +131,33 @@ In language technology, it is involved in:
 - _Lexeme_ = abstract lexical entity consisting of __form + meaning__. It represents a
   set of forms (note: this is according to the slides. I actually think that a better definition would be: “__basic unit of a language with *lexical meaning*__ consisting of one or several words, the elements of which do not separately convey the (lexical) meaning of the whole”)
   
-- _Root_ = basic part of a lexeme not further analysable either in terms of inflectional or derivational morphology, always present in every form (note: compounds have two roots)
+- _Root_ = basic part of a lexeme not further analyzable either in terms of inflectional or derivational morphology, always present in every form (note: compounds have two roots)
 
 - _Stem_ = a root or a root + a derivational morpheme changing its meaning (example: “deduce” is a stem but not a root, as it can be analysed in terms of “de” + “duce”)
 
 - _Lemma_ = basic form that represents the word e.g. in a dictionary
 
-- _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the bestämd form of a Swedish word or the past simple of an English verb)
+- _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the _bestämd_ form of a Swedish word or the past simple of an English verb)
 
 - _String_ = sequence of characters
 
 - _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). They are divided into:
   - _free_ (standalone) morphemes
   - _bound_ morphemes (the _base_ of a word is the part to which bound morphemes are attached): 
-    - roots
-    - affixes (prefixes, suffixes, infixes, circumfixes)
-    - clitics: depend on other words, their host word can belong to several classes of words. Example: “the”, “a”
+    - _roots_
+    - _affixes_ (prefixes, suffixes, infixes, circumfixes)
+    - _clitics_: depend on other words, their host word can belong to several classes of words. Example: “the”, “a”
   
   Can also be divided into:
   
   - _lexical_
-  - _grammatical_ (with one ore more meanings attached at the same time, cf. verb suffuxes in Spanish ans Italian. In this latter case they are called _portmanteau morphemes_)
+  - _grammatical_ (with one ore more meanings attached at the same time, cf. verb suffixes in Spanish ans Italian. In this latter case they are called _portmanteau morphemes_)
   
 - _Morph_ = A phonetic (and sometimes orthographic) representation of a morpheme. Different morphemes associated with the same meaning are called _allomorphs_. Examples:
   - the plural of the Swedish word “**fågel**” is “**fågl**ar”. “Fågel” and “fågl” are then allomorphs
   - “-s” and “-es” are allomorphs of the English plural morpheme
 
-## Content vs function words
+## Content VS function words
 
 - _Content words_: __words with a clear *lexical meaning*__ (nouns, verbs, adjectives. Note that these classes of words all are _open classes_, i.e. it is possible to add them new words)
 - _Function words_ : __words__ with no clear lexical meaning, __which__ instead __specify *grammatical functions* and relationships__ (conjunctions, prepositions, articles, pronouns. Note how they are all [almost: cf. “hen” in Swedish!] _closed classes_)
@@ -165,19 +165,20 @@ In language technology, it is involved in:
 The brain treats content and functions words differently! In fact:
 
 - Some aphasics are unable to read function words like “in” or “which”, but can read the lexical words “inn” and “witch”
-- __In early stages of development children often omit function words
+- In early stages of development children often omit function words
 
 ## Word formation (morphological) processes
 
-- _Coining_ (= making up new terms)
-- _Loan_ (from other languages): andante, oxymoron, balonvolea...
-- _Calque_ or _loan translation_: e-post, skyskrapa, scannerizzare...
+- _Coining_ (making up new terms)
+- _Loan_ from other languages: andante, oxymoron...
+- _Calque_ or _loan translation_: e-post, skyskrapa, scannerizzare, balonvolea...
 - _Acronym_: ISA (Instruction Set Architecture), FLOSS (Free, Libre and Open Source)...
 - _Clipping_ (word shortening): math, fax, phone...
 - _Blending_ of the first part of the word with the ending part of another: brunch, smog, bankomat
-- _Compounding_: putting together 2+ lexemes that could function as independent words
-- _Derivation_: process that __turns a word into another word__, often happens via _derivational affixes_ such as “-ism”. 
-- _Inflection_: process that __creates a new word *form*__
+- _Compounding_ (putting together 2+ lexemes that could function as independent words): geburtstagsgeschenk and many more examples in German and Swedish
+- _Derivation_ (__turning a word into another word__, itoften happens via _derivational affixes_ such as “-ism”) 
+- _Inflection_ (__creation of a new word *form*__)
+- ...
 
 ### Derivation vs inflection
 
@@ -195,6 +196,9 @@ The brain treats content and functions words differently! In fact:
 3. check what role the morphs that have been isolated have in other forms
 4. check that the isolated morphs are in fact morphs in that they are “minimum”  
 
+## Word classes
+Traditional (classical) grammar attempts to classify words based on their function. More on that in the section about syntax, especially under "Types of POS".
+
 ## Typology (based on morphology)
 
 Languages are grouped into categories based on morphology:
@@ -207,22 +211,40 @@ Languages are grouped into categories based on morphology:
   - **poly-synthetic**: a single word is possibly a sentence (Icelandic)
   - **non-concatenative**: base made of consonants, vowels infixed (Arabic, Hebrew)
 
-## Morphology “problems”
+## Typical morphology “problems”
 
 - Where to split words? (“hoppa-r” or “hopp-ar”)
 - what if there are multiple stems? (“vado”, “andare”)
 - function or content? (“stor-het” vs “stor-lek”)
-- what if identical morphs of the same lexeme indicate different morphemes? (e.g. Swedish adjectives terminate in “”-a” both in singular bestämd form and in plural obestämd form)
+- what if identical morphs of the same lexeme indicate different morphemes? (e.g. Swedish adjectives terminate in ”-a” both in singular bestämd form and in plural obestämd form)
 
 ## Relationship with other subfields of linguistics
 
-### Morphosyntax
+### Morphology
 
-It’s often useful to talk about morphology and syntax together because some things are expressed morphologically in a language and syntactically in another.
+#### Morphosyntax
+It’s often useful to talk about morphology and syntax together (__*morphosyntax*__) because some things are expressed morphologically in a language and syntactically in another. 
+
+#### Grammar
+One could also argue that syntax and morphology are so closely related that they should not be distinguished one from the other. Assuming this, we shall talk instead of __*grammar*__ (i.e. syntax + morphology). Traditional (classical) grammar tends adopt a _prescriptive_ approach. Nowadays, however a descriptive approach is preferred, based on the analysis of collections of real-world language samples. 
+
+##### Structural analysis
+One of the methods applied by those who follow a descriptive approach is called _structural analysis_. It investigates the distribution of forms in a language by checking what forms can fit certain "test frames". Example:
+- Test frame: "The ___ makes a lot of noise"
+- Possible fits: "car", "child", "dog", "radio"...
+- Possible analysis: the possible fits all belong to the same grammatical category (Noun. But then wat about "Sam" and "A car"? (Noun Phrase) It's interesting to notice that pro-nouns are actually pro-nounphrases!)
+
+##### Constituent analysis
+This (descriptive) technique is designed to show how small constituents form larger constructs. To a computer scientist, it really looks like building the AST of natural language sentences.
+
+![Constituent analysis.](const.jpg)
+
+Using this kind of diagrams helps us understanding the types of form that can be substituted for each other at different levels, but also, at a higher level, to work out the grammatical functions of phrases (for instance, in the diagram above "This tree" is a Noun Phrase whose role is to be the subject).
+
 
 ### Lexicon
 
-Lexicon should perhaps be considered alongside morphology and syntax. We shall define lexicon later on, but for now let’s just say that according to one possible (and rather broad) its “units”, called _lexical entries_ are idealised mental constructs such as the syntactic pattern “PREPOSITION + NOUN PHRASE” in English.
+Lexicon should perhaps be considered alongside morphology and syntax. We shall define lexicon later on, but for now let’s just say that according to one possible (and rather broad) its “units”, called _lexical entries_ are idealized mental constructs such as the syntactic pattern “PREPOSITION + NOUN PHRASE” in English.
 
 ## Computational morphology
 
@@ -490,8 +512,6 @@ Classification of consonants based on phonation (not valid for all languages):
     | **pharyngeal**    | [ħ]             | voiceless | oral       | active: root of the tongue; passive: pharynx                 |
     | **glottal**       | [h]             | voiceless | oral       | glottis                                                      |
 
-    
-
 - _degree_ of stricture:
 
   - open approximation -> resonants
@@ -656,7 +676,7 @@ Properties that CFGs _do not_ have but that are required to be able to model lan
 - phrases have heads (terminal symbols) that determine their category
 - heads can be modified by other phrases (modifiers)
 - selectional restrictions on constituents:
-  - __agreement__ (which depends exactly on the context - person, number, tense, quantifiers...)
+  - __agreement__ (which depends exactly on the context - person, number, tense, gender, quantifiers...)
   - __sub-categorization__ (note: the example in the slide is "Alex liked *(the park)"; I don't get why it should be incorrect)
 - __arbitrary rules of specific languages__ (like mandatory subject: "_it_ rains")
 - sentences have to have a sensible __meaning__: "*(The tree climbed up Alex)".
@@ -707,8 +727,10 @@ How many and what parts of speech there are depends on the language and the gram
 - Pronouns ans anaphora (e.g. itself)
 - Determiners (e.g. articles and numerals)
 - Prepositions
-- Complementizers (e.g. that, for, if...)
 - Conjunctions
+
+But also:
+- Complementizers (e.g. that, for, if...)
 - Negations
 - Auxiliaries (is, do, have, to)
 - Modal verbs (will, would, shall, should, can, could)
@@ -724,6 +746,15 @@ Words associate with certain other words and form units. In order to find the co
 
 ### Phrase structure
 We can represent the hierarchical structure of sentences via bracketing or trees.
+
+## Typology
+Languages can also be classified in terms of their syntax.
+One way to do so is to consider (the most common) word ordering, focusing on Subject, Verb and Object. The most commonly found orderings are:
+
+1. SVO (Italian, English, Spanish... all of the languages I speak excepts Swedish whenever the sentence starts with something other than the subject)
+2. SOV (e.g. Japanese)
+3. VSO (e.g. Gaelic)
+4. VOS (e.g. Malagasy)
 
 # Semantics
 
