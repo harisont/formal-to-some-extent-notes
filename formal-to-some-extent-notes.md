@@ -5,25 +5,24 @@
 
 # Introduction to Formal Linguistics
 
-- FL is only formal to some extent, so not as a binary notion. This is due to the fact that the object of study is natural language, which is ambiguous -> levels of “formalness”
-- Precursors: 
+FL is only formal to some extent - not as a binary notion. This is due to the fact that the object of study is natural language, which is ambiguous. There are, then, various "levels of formality”.
 
-  - Pāṇini (Sanskrit philologist, IV century BCE)
-  - various Greek philosophers
-  - XIX century: 
-    - historical & diachronic perspective
-    - Hermann Paul: compositionality (sentences are the sum of their parts, not quite true but useful)
-  - XX century: Saussure -> ~~Synchronic~~ (…)
+## Timeline
+Precursors: 
+
+- Pāṇini (Sanskrit philologist, IV century BCE)
+- various Greek philosophers
+- XIX century: 
+  - historical & diachronic perspective
+  - Hermann Paul: compositionality (sentences are the sum of their parts, not quite true but useful)
+  - XX century: Saussure -> ~~Synchronic~~ (...)
 - Pioneer: __Noam Chomsky__ (mid 50s) - principal contributions:
   - Syntactic structures (using mathematical tools in language analysis)
   - Chomsky hierarchy
   
+## Methodologies
 
-# Overview of linguistics
-
-## Methods
-
-- _corpus_ linguistics (= study of language as expressed in _corpora_ of "real world" text. If collected in natural context (_realia_), effectiveness improves)
+- _Corpus_ linguistics (= study of language as expressed in _corpora_ of "real world" text. If collected in natural context (_realia_), effectiveness improves)
 - formal analysis
 - experimental methods (a wide variety)
 - ethno-methodology (= conversation analysis, i.e. just observe language in context, used in anthropology)
@@ -35,22 +34,22 @@ Main subfields:
 - **Phonetics** (deals with the _production of speech sounds_)
   - articulatory -> IPA chart (phonetic alphabet)
   - acoustic (physics side of things)
-- **Phonology** (is about _patterns of sounds conveying a meaning_) -> phonemes, phonological rules
-- **Morphology** (= study of the different forms words have, no clear boundary with syntax, cf. compounding in German and Swedish)
-  - inflectional: about different forms in a paradigmrgb(20, 20, 20), singular VS plural, feminine vs masculine…
-  - derivational: about how to create new words from existing ones (possibly in another category, e.g. adjectives from nouns)
-- **Syntax/Grammar** (= set of [formally expressed, assuming that natural language is context free] structural rules governing the composition of clauses, phrases and words)
-- **Semantics** (= study of the meaning) (uses propositional & first order logic, model theory (somehow closely related to set theory) and inference (formal & pragmatic, i.e. common sense inference)
-- **Pragmatics** (= study of language _in use_): difference between what we say & what we communicate, dynamic meaning
-- **Lexicon** (= inventories of words [+ idioms])
+- **Phonology** (is about _patterns of sounds conveying a meaning_): phonemes, phonological rules
+- **Morphology**: the study of the different forms words have, the boundary with syntax is not clear (cf. compounding in German and Swedish)
+  - inflectional: about different forms in a paradigm, singular VS plural, feminine vs masculine...
+  - derivational: about how to create new words from existing ones (possibly in another category, e.g. nouns from adjectives)
+- **Syntax/Grammar**: set of (formally expressed, assuming that natural language is context free) structural rules governing the composition of clauses, phrases and words
+- **Semantics**: the study of meaning. It makes use of propositional & first order logic, model theory (somehow closely related to set theory) and inference (formal and pragmatic, i.e. common sense inference)
+- **Pragmatics**: study of language _in use_ (difference between what we say & what we communicate, dynamic meaning)
+- **Lexicon**: inventories of words (+ idioms)
 
 Secondary subfields:
 
 - historical linguistics
 - comparative linguistics & typology
-- (…)
+- (...)
 
-# Expression types
+## The origins of language
 
 - __Lexical expressions__: require the speaker to turn to the lexicon in order to express a particular nuance of meaning (e.g. _stem suppletion_: “go” -> “went” and _isomorphism_ -> in English the past tense of “hit” is still “hit”)
 - __morphological processes__: require to alter the form of a word in some predictable way
@@ -69,19 +68,15 @@ There is a lot of speculation on the origin of language (but not a definitive ex
 - __tool making__ (based on the fact that the areas of the brain and brain activity involved in complex vocalisation and tool making are remarkably similar)
 - __genetic__ (__innateness hypothesis__)
 
-## Computational linguistics (aka NLP etc.)
+## Computational linguistics 
 
-> Computational linguistics : Linguistics 
-> 	= 
-> NLP : CS 
-> 	= 
-> speech recognition : electrical engineering 
-> 	= 
-> computational psycholinguistics : psychology
+Many names for basically the same thing: 
 
-Natural Language Processing differs from other data processing tasks because it requires knowledge of language. One of the main problems is the __ambiguity__ of natural language (-> lexical and semantic disambiguation, probabilistic parsing). 
+> Computational linguistics : Linguistics = NLP : CS = speech recognition : electrical engineering	= computational psycholinguistics : psychology
 
-## Tasks
+Natural Language Processing differs from other data processing tasks because it requires knowledge of language. One of the main problems is the ambiguity of natural language -> lexical and semantic disambiguation, probabilistic parsing.
+
+### Tasks
 
 The objective of NLP is to make computers perform tasks involving natural language, e.g.:
 
@@ -89,13 +84,13 @@ The objective of NLP is to make computers perform tasks involving natural langua
   - machine translation
 - enabling human-computer communication
   - dialogue systems (aka conversational agents)
-  - web-based question answering (solved for yes/no and factoid questions)
+  - web-based question answering ("solved" for yes/no and factoid questions)
 - performing text and/or speech processing
   - TTS (Text To Speech)
   - STT (Speech To text)
   - grammar & spell checking
 
-## Tools
+### Tools
 
 - State machines
 - rule systems
@@ -104,7 +99,7 @@ The objective of NLP is to make computers perform tasks involving natural langua
 - predicate & first-order logic
 - classic search algorithms such as depth & breadth first search and A* search
 
-## Chronology
+### Chronology
 
 - 1936: automata (Turing)
 - 1943: McCulloch-Pitts neuron
