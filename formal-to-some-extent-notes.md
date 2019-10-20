@@ -112,12 +112,14 @@ The objective of NLP is to make computers perform tasks involving natural langua
 
 # Morphology
 
-> __Morphology__ = the study of words: what they are how they are formed and their different forms
+> __Morphology__ = the study of __words__: what they are, how they are formed and their different forms
 
 In language technology, it is involved in:
 
 - analysis: parsing, speech recognition, machine translation
 - generation: language generation, machine translation
+
+It's important to notice that it is even nontrivial to define what a word is, unless we only take _orthographic_ (i.e. separated by spaces when spelt) words into account (but even in that case, what about "tea-bag" and "I'll"?).
 
 ## Leading figures
 
@@ -135,13 +137,15 @@ In language technology, it is involved in:
 
 - _Stem_ = a root or a root + a derivational morpheme changing its meaning (example: “deduce” is a stem but not a root, as it can be analysed in terms of “de” + “duce”)
 
-- _Lemma_ = basic form that represents the word e.g. in a dictionary
+- _Lemma_ = basic form that represents the word e.g. in a dictionary (even though I cannot unsee that this is exactly how Bauer defines lexemes...)
 
 - _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the _bestämd_ form of a Swedish word or the past simple of an English verb)
 
+- _Grammatical word_ = words defined in terms of their place in the paradigm, described for instance as "the past simple of verb X"
+
 - _String_ = sequence of characters
 
-- _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). They are divided into:
+- _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). According to Bauer, this is actually how you define _morphs_, but as we will see later most sources agree on the fact that a morph is, instead, the _phonetic_ realization of that morpheme. They are divided into:
   - _free_ (standalone) morphemes
   - _bound_ morphemes (the _base_ of a word is the part to which bound morphemes are attached): 
     - _roots_
@@ -153,9 +157,10 @@ In language technology, it is involved in:
   - _lexical_
   - _grammatical_ (with one ore more meanings attached at the same time, cf. verb suffixes in Spanish ans Italian. In this latter case they are called _portmanteau morphemes_)
   
-- _Morph_ = A phonetic (and sometimes orthographic) representation of a morpheme. Different morphemes associated with the same meaning are called _allomorphs_. Examples:
+- _Morph_ = A phonetic (and sometimes orthographic) representation of a morpheme. Different morphemes associated with the same meaning (in complementary distribution) are called _allomorphs_. Examples:
   - the plural of the Swedish word “**fågel**” is “**fågl**ar”. “Fågel” and “fågl” are then allomorphs
   - “-s” and “-es” are allomorphs of the English plural morpheme
+  - the English articles "a" and "an" are allomorphs
 
 ## Content VS function words
 
