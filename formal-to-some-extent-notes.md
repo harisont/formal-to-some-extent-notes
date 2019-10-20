@@ -170,10 +170,10 @@ The brain treats content and functions words differently! In fact:
 ## Word formation (morphological) processes
 
 - _Coining_ (= making up new terms)
-- _Loan_ (from other languages): andante, oxymoron, balonvolea…
-- _Calque_ or _loan translation_: e-post, skyskrapa, scannerizzare…
-- _Acronym_: ISA (Instruction Set Architecture), FLOSS (Free, Libre and Open Source)…
-- _Clipping_ (word shortening): math, fax, phone…
+- _Loan_ (from other languages): andante, oxymoron, balonvolea...
+- _Calque_ or _loan translation_: e-post, skyskrapa, scannerizzare...
+- _Acronym_: ISA (Instruction Set Architecture), FLOSS (Free, Libre and Open Source)...
+- _Clipping_ (word shortening): math, fax, phone...
 - _Blending_ of the first part of the word with the ending part of another: brunch, smog, bankomat
 - _Compounding_: putting together 2+ lexemes that could function as independent words
 - _Derivation_: process that __turns a word into another word__, often happens via _derivational affixes_ such as “-ism”. 
@@ -276,10 +276,10 @@ Some examples to illustrate the usage of the `[]` operator:
 | Example expression | Matched characters |
 | ------------------ | ------------------ |
 | [Aa]               | A, a               |
-| [A-Z]              | A, …, Z            |
-| [0-9]              | 0, …, 9            |
-| [a-z]              | a, …, z            |
-| [0-9 A-Z]          | 0, …, 9, a, …, z   |
+| [A-Z]              | A, ..., Z            |
+| [0-9]              | 0, ..., 9            |
+| [a-z]              | a, ..., z            |
+| [0-9 A-Z]          | 0, ..., 9, a, ..., z   |
 
 ### Finite-state automata
 
@@ -342,7 +342,7 @@ It works as follows:
 2. Examine the current input (= read the symbol current cell)
 3. Consult the _symbol table_
 4. Go to a new state according to what the table says
-5. …
+5. ...
 6. Until the tape ends
 
 If, at any point in time, there is always only one thing to do, recognising is said to be _deterministic_ (simple table-driven interpreter. This concepts applies directly to automata as well, and given a NFA (where “N” stands for “Non-deterministic”) it is always possible to algorithmically construct an equivalent DFA (where “D” stands for “Deterministic”). There are, then, two main approaches to recognition:
@@ -472,7 +472,7 @@ Classification of consonants based on phonation (not valid for all languages):
 
   - active (i.e. moving) articulators: lower lip, tongue
 
-  - passive articulators: upper lip and teeth, upper oral cavity, back wall of the pharynx…
+  - passive articulators: upper lip and teeth, upper oral cavity, back wall of the pharynx...
 
     ##### Classification of some consonants based on phonation and articulation
 
@@ -531,7 +531,7 @@ Co-ordination is represented via diacritics (not listed here) in the IPA.
 
 ## Prosody
 
-Stress, pitch accent, intonation…
+Stress, pitch accent, intonation...
 
 ## The International Phonetic Alphabet
 
@@ -596,9 +596,9 @@ Phonotactics is a part of phonology which treats how different phonemes can be c
 
 ## Transcriptions
 
-Do not confuse **phonetic transcriptions** (enclosed in […] and very close to the “actual pronunciation”) with **_phonemic_ transcriptions** (more abstract and phoneme based, enclosed in /…/).
+Do not confuse **phonetic transcriptions** (enclosed in [...] and very close to the “actual pronunciation”) with **_phonemic_ transcriptions** (more abstract and phoneme based, enclosed in /.../).
 
-On top of this, there are _**graphemes**_, i.e. alphabetic characters of the various writing systems, sometimes enclosed in <…>. The study of the different writing systems is called _graphonomics_.
+On top of this, there are _**graphemes**_, i.e. alphabetic characters of the various writing systems, sometimes enclosed in <...>. The study of the different writing systems is called _graphonomics_.
 
 # Syntax
 
@@ -848,7 +848,7 @@ Example: “ha finito la bottiglia” (l’acqua nella bottiglia), “non ci son
 
 Words can be described in terms of the qualities essential to their referents. Such qualities can be combined with syntax rules to form a grammar so not to form sentences like: “the carpet ate a sandwich” (this may or may not be a good idea).
 
-Example: animate/inanimate, gender…
+Example: animate/inanimate, gender...
 
 ## Prototypes
 
