@@ -149,7 +149,7 @@ It's important to notice that it is even nontrivial to define what a word is, un
   - _free_ (standalone) morphemes
   - _bound_ morphemes (the _base_ of a word is the part to which bound morphemes are attached): 
     - _roots_
-    - _affixes_ (prefixes, suffixes, infixes, circumfixes)
+    - _affixes_: (prefixes, suffixes, infixes, circumfixes)
     - _clitics_: depend on other words, their host word can belong to several classes of words. Example: “the”, “a”
   
   Can also be divided into:
@@ -181,7 +181,7 @@ The brain treats content and functions words differently! In fact:
 - _Clipping_ (word shortening): math, fax, phone...
 - _Blending_ of the first part of the word with the ending part of another: brunch, smog, bankomat
 - _Compounding_ (putting together 2+ lexemes that could function as independent words): geburtstagsgeschenk and many more examples in German and Swedish
-- _Derivation_ (__turning a word into another word__, itoften happens via _derivational affixes_ such as “-ism”) 
+- _Derivation_ (__turning a word into another word__, it often happens via _derivational affixes_ such as “-ism”) 
 - _Inflection_ (__creation of a new word *form*__)
 - ...
 
@@ -688,7 +688,7 @@ Properties that CFGs _do not_ have but that are required to be able to model lan
 
 Potential solutions:
 - As for __agreement__, it is possible to encode the agreement information in CFG rules (a solution which is in part similar to an annotating type checker)
-- As for __sub-categorization__, we can take a general rule and split it into a set of more specific rules. For example, if we had a general rule for verb phrases, we could instead see verbs as predicates and generate different rules for:
+- As for __sub-categorization__, we can take a general rule and split it into a set of more specific rules, so that we have one per predicate category (naive solution). For example, if we had a general rule for verb phrases, we could instead see verbs as predicates and generate different rules for:
   - verbs with no arguments ("rain")
   - verbs with an agent argument (aka intransitive verbs, e.g. "sneeze")
   - verbs with a theme argument (aka un-accusative verbs, e.g. "fall")
@@ -696,6 +696,7 @@ Potential solutions:
   - verbs with an agent, a theme and a goal argument (e.g. "give", as in "I gave a present to her")
   - verbs with an agent and a proposition argument (aka factive verbs, e.g. "say" as in "He said that he enjoyed the concert")
   - ... (cf. thematic roles in the chapter on Semantics)
+- Make use of theta roles (see section on semantics) (?)
 - Again for __sub-categorization__, we can take into account the core frame elements for communication:
   - communicator
   - medium
@@ -707,11 +708,13 @@ Potential solutions:
   - frequency
   - ...
 
-##### Feature structures
+##### Feature structures (unclear, note that in the example Cat stands for Category)
 
 In general, when it comes to representing constraints, instead of introducing a whole lot of new rules we can use __*feature structures*__.
 
-In particular, we represent each node of our CFG as a feature structure, to which we can add constraints. We can perform unification (⊔) on such feature structures (for a graphical - matrix - representation of such features, see syntax 2 slides 26+).
+In particular, we represent each node of our CFG as a feature structure, to which we can add constraints. We can perform unification (⊔) on such feature structures (for a graphical - matrix - representation of such features, referred to as Attribute Value Matrix, see syntax 2 slides 26+).
+
+#### Propagating features from heads (...)
 
 ## Words, aka terminal symbols, aka Parts Of Speech (POS)
 
@@ -894,7 +897,7 @@ Another way to describe meaning is to do so via prototypes.
 
 This is very intuitive and very dangerous: for example, what’s the prototype of a human?
 
-## Thematic roles (aka $\theta$-rules)
+## Thematic roles (aka $\theta$-roles)
 
 Finally, meaning can be described via thematic roles, that focus on the relations between parts of speech. Here are some of the most important _roles_:
 
@@ -934,3 +937,14 @@ We can model _entailment_ like in formal logic. For example, from “The Queen o
 #### Conversational implicature
 
 Pseudo-inference from inexact/incomplete information. Example: “Are you planning to be at school for lunch?” “I have to go to class in the morning and then I have a meeting at 2:30 pm” “_See you in the canteen, then_”.
+
+# Putting things together
+
+How to work, for instance, with syntax and semantics together?
+Build "ASTs" that automatically generate first order logic propositions (and compute the consequences, e.g. "Katia walks" -> "Someone walks" - Natural Language Inference: yes: proof, no: proof of the negation, unknown: no proof, Textual Entailment).
+
+Cool stuff:
+- FraCaS
+- Grammatical Framework (+ Coq)
+- Damn NNs
+- HYBRID SYSTEMS -> Conference
