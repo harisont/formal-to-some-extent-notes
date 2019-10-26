@@ -263,14 +263,20 @@ A formal definition of regular languages:
 
 - $\empty$ is a RL
 - $\forall a \in \Sigma \cup \epsilon, {a}$ is a RL
-- if $L_1$ and $L_2$ are regular languages, then so are
+- if $L_1$ and $L_2$ are RLs, then so are
   - $L_1 \cdot L_2 = {xy | x \in L_1, y \in L_2}$ (_concatenation_)
   - $L_1 \cup L_2$ (_union_ or _disjunction_)
   - $L_1*$ (and $L_2*$) (_Kleene closure_)
 
+Regular languages are also closed under the following operations:
+- intersection $\cap$
+- difference between languages $-$
+- complementation between $\Sigma*$ and the language $-$
+- reversal $^{R}$ 
+
 ### Regular expressions
 
-> Regular expressions (regex) are an algebraic notation for characterising sets of strings. 
+> Regular expressions (regex) are an algebraic notation for characterizing sets of strings. 
 
 They are made of _atomic symbols_ (lowercase Latin letters) and operations. The fundamental ones are:
 
@@ -279,22 +285,24 @@ They are made of _atomic symbols_ (lowercase Latin letters) and operations. The 
 
 There are also some more specific useful operators (there are actually various conventions though):
 
-| Operator | Meaning                                                      |
-| -------- | ------------------------------------------------------------ |
-| `?`      | the preceding character or nothing                           |
-| `*`      | 0+ occurrences of the previous characters (well, this is just Kleenee) |
-| `+`      | 1+ occurrences of the previous character                     |
-| `.`      | whatever single character                                    |
-| `^`      | start of the line (e.g. `^ the` mathces lines starting with “the”) |
-| `$`      | end of the line                                              |
-| `\d`     | any digit                                                    |
-| `\D`     | any non-digit                                                |
-| `\w`     | any alphanumeric character                                   |
-| `\W`     | any non-alphanumeric character                               |
-| `\s`     | whitespace                                                   |
-| `\S`     | non-whitespace                                               |
-| `|`      | logical or (usage: like `^`)                                 |
-| `()`     | precedence (e.g. `(y|ies)`)                                  |
+| Operator | Meaning                                                                |
+| -------- | ---------------------------------------------------------------------- |
+| `?`      | the preceding character or nothing                                     |
+| `*`      | 0+ occurrences of the previous characters (well, this is just Kleene)  |
+| `+`      | 1c occurrences of the previous character ("Kleene +")                  |
+| `.`      | whatever single character                                              |
+| `^`      | start of the line (e.g. `^the` matches lines starting with “the”)      |
+| `$`      | end of the line                                                        |
+| `\d`     | any digit                                                              |
+| `\b`     | any digit                                                              |
+| `\B`     | boundary between words                                                 |
+| `\D`     | non-boundary between words                                             |
+| `\w`     | any alphanumeric character                                             |
+| `\W`     | any non-alphanumeric character                                         |
+| `\s`     | whitespace                                                             |
+| `\S`     | non-whitespace                                                         |
+| `|`      | logical or (usage: like `^`)                                           |
+| `()`     | precedence (e.g. `(y|ies)`)                                            | 
 
 #### Brackets
 
