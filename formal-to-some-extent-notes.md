@@ -391,7 +391,7 @@ See “Sintesi” in LFC notes by Arturo Carpi.
 
 ### FST (Finite State Transducers)
 
-A FST is a finite-state machine with _two_ memory tapes (an input tape and an output tape). It is, then, a generalisation of a FSA, which is single-taped: a FSA defines a formal language by defining a set of accepted strings, while a FST defines _relations between sets of strings_, i.e. it __maps between two sets of symbols__.
+A FST is a finite-state machine with _two_ memory tapes (an input tape and an output tape). It is, then, a generalization of a FSA, which is single-taped: a FSA defines a formal language by defining a set of accepted strings, while a FST defines _relations between sets of strings_, i.e. it __maps between two sets of symbols__.
 
 In terms of graphs, the difference between FSA and FST is that in FST arcs are labelled with _pairs_ of symbols.
 
@@ -403,23 +403,39 @@ More formally,
 > $$
 > where every element is defined as in FSAs excepts:
 >
-> - $\Sigma$ is the (finite) __input__ alphabet
-> - $\Delta$ is the (finite) __output__ alphabet
-> - $\sigma : Q \times \Sigma \to \Delta$ (not entirely sure I got the type right) is the _output function_, which gives the set of possible output strings for each state and input
+> - $\Sigma$ is the (finite) _input_ alphabet
+> - $\Delta$ is the (finite) _output_ alphabet
+> - $\delta : Q \times \Sigma * \to P(Q)$, where $|P(Q)| = 2^Q$, is the transition function that returns not a single state but a _set_ of states
+> - $\sigma : Q \times \Sigma * \to P(\Delta)$, where $|P(Q)| = 2^Q$, is the _output function_, which gives the set of possible output strings for each state and input
 
-Such a machine is useful to build _morphological parsers_. They require:
+Note that transducers as described above are nondeterministic. _Sequential_ transducers are their deterministic counterpart, but there is no general w'90
+determinization algorithm, in contrast with FSAs.
 
-- a lexicon, for instance:
+Such a machine can be interpreted as:
+- a __recognizer__, taking a pair of strings as input and output "accept" or "reject" depending on if the pair belongs to the string-pair language
+- a __generator__ outputting pairs of strings of the language
+- a __translator__ that takes a string as input and outputs another
+- a __set relater__
+
+Seen as a translator, it is useful to build _morphological parsers_. They require:
+
+- a lexicon, i,e. a mapping between stems/affixes and basic information about them, for instance:
   - cat N
   - watch V
   - mouse N
-  - clear
-- morphotactics, for instance [un] + adjective + [er] as in clear, unclear, clearer
+- morphotactics, i.e. a model of morpheme ordering, for instance [un] + adjective + [er] as in clear, unclear, clearer
 - orthographic rules, for instance inserting “e” before “s” in the third person of “watch”
 
 #### Regular relations and regular expressions
 
-I don’t see the point (yet). There are a few slides apparently just to say that regular relations are in a way similar to regular expression, but they establish correspondences between the two languages, for some reason called upper and lower language.
+While FSAs are isomorphic to regular languages (and regular expressions), FSTs are isomorphic to regulars _relations_), which are their natural extensions (instead of being sets of strings, of course, they are sets of pairs of strings).
+They are closed under:
+- union $\cup$
+- inversion $T(T^{-1})$ (switching input and output; useful because it makes it easy to go from a "FST as translator" to a "FST as generator")
+- composition $\circ$ (useful to replace two translators in series with a more complex one)
+
+#### Relation to FSAs
+The (resp. upper and lower) _projection_ of a FST is the FSA obtained by extracting only one side of the relation.
 
 ### Why finite-state computing?
 
@@ -436,8 +452,6 @@ I don’t see the point (yet). There are a few slides apparently just to say tha
 
 ## Some anatomy
 We call _vocal tract_ what comprises the various parts of the body used to produce speech sounds. It is interesting to notice that each of these body parts has its own biological function and its adaptation for speaking is only seconda, so there is no such thing as "the organ of speech". 
-
-TODO: add images from book (general and larynx).
 
 ### Tools
 - Autopsy (oh well...)
@@ -538,11 +552,11 @@ Classification of consonants based on phonation (not valid for all languages):
     - central VS lateral (another way to distinguish between resonants and fricatives)
   - _topographical_ (tongue surface convex/concave):
     - grooved (fricatives)
-    2. retroflex (stops, fricatives and resonants)
-    3. cupped (stops, fricatives and resonants)
-    4. withdrawn tongue root (resonants)
-    5. extented of the tongue tip (stops, fricatives, and resonants)
-    6. advancement of the tongue root (ATR) (stops, fricatives and
+    1. retroflex (stops, fricatives and resonants)
+    2. cupped (stops, fricatives and resonants)
+    3. withdrawn tongue root (resonants)
+    4. extented of the tongue tip (stops, fricatives, and resonants)
+    5. advancement of the tongue root (ATR) (stops, fricatives and
     resonants)
   - _transitional_ (steady/dynamic):
     - flapped (stops, fricatives and resonants)
