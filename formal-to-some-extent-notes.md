@@ -164,7 +164,7 @@ It's important to notice that it is even nontrivial to define what a word is, un
 
 ## Content VS function words
 
-- _Content words_: __words with a clear *lexical meaning*__ (nouns, verbs, adjectives. Note that these classes of words all are _open classes_, i.e. it is possible to add them new words)
+- _Content words_: __words with a clear *lexical meaning*__ (nouns, verbs, adjectives. Note that these classes of words all are _open classes_, i.e. it is possible to add them new words, and that )
 - _Function words_ : __words__ with no clear lexical meaning, __which__ instead __specify *grammatical functions* and relationships__ (conjunctions, prepositions, articles, pronouns. Note how they are all [almost: cf. “hen” in Swedish!] _closed classes_)
 
 The brain treats content and functions words differently! In fact:
@@ -202,7 +202,7 @@ The brain treats content and functions words differently! In fact:
 4. check that the isolated morphs are in fact morphs in that they are “minimum”  
 
 ## Word classes
-Traditional (classical) grammar attempts to classify words based on their function. More on that in the section about syntax, especially under "Types of POS".
+Traditional (classical) grammar attempts to classify words based on their function with respect to what can occur nearby (_syntactic distributional properties_) or based on to affixes they can take (_morphological properties_). More on that in the section about syntax, especially under "Types of POS".
 
 ## Typology (based on morphology)
 
@@ -656,7 +656,7 @@ This means that syntax operates on the level of words (or higher) and that its p
 
 Even if (most linguist think that) natural languages are not formal, formal syntax is still an useful tool to analyse them.
 
-## Generative grammars (Chomsky) 
+## Formal (generative) grammars (Chomsky) 
 
 Main principles:
 
@@ -665,8 +665,6 @@ Main principles:
   - there exists universal grammar (UG) innate to humans. Variations between languages are parameters set during language acquisition
   - syntactic processes are central in human language production & understanding and in reasoning
 
-## Formal grammars
-
 > A _formal grammar_ is a 4-uple $(\Sigma, N, P, S)$ where
 >
 > - $\Sigma$ is a finite set of __terminal symbols__ (denoted by small latin letters + $\epsilon$, the empty string)
@@ -674,7 +672,25 @@ Main principles:
 > - $P$ is a finite set of __production rules__ in the form $left \to right$, where both $left$ and $right$ are sequences of elements belonging to the two sets above
 > - $S \in N$ is a __start symbol__
 
-_Derivation_ consists in starting from $S$ and applying rules by replacing symbols on their $left$ sides with symbols on the respective $right$ sides, stopping when there are no more variables.
+Conventions:
+- capital latin letters denote variables
+- small latin letters denote strings of terminals
+- small greek letters denote strings in $(\Sigma \cup N)*$
+
+In the context of FGs, language are defined via __derivation__, which consists in starting from $S$ and applying rules by replacing symbols on their $left$ sides with symbols on the respective $right$ sides, stopping when there are no more variables. More precisely
+
+> A string _derives_ (resp. _directly derives_) another one if it can be rewritten as the second one via some series of rule applications (resp. via one rule application). 
+
+### Normal forms
+It is sometimes useful to have a normal form for grammars.
+One such normal form is the __Chomsky Normal Form__. Its characteristics are:
+1. $\epsilon$-free
+2. productions in the forms:
+  - $A \to BC$
+  - $A \to a$
+
+Note that 2 makes it so that parse trees are binary trees!
+See LFC notes to know how to convert a grammar to its normal form.
 
 ### Chomsky hierarchy
 
@@ -688,10 +704,16 @@ Increasing the power of the production rules yields different “levels” of fo
 | 3            | regular                                | $A \to a$ and $A \to aB$                 |
 
 ### Context free grammars
-(Example rules: see slides 28-30.)
 
-Properties of CFGs:
-- a phrase can be applied independently of its context(no context on the LHS of rules; this it what it means for a grammar to be context free)
+Formal definition:
+> A CFG is a 4-uple $<N, \Sigma, P, S>$ where
+> - $N$ is a set of _nonterminal symbols_ or _variables_
+> - $\Sigma$ is a set of _terminal symbols_ (note that $N \cap \Sigma = \empty$)
+> - $R$ is a set of _rules_ or _productions_ in the form $A \to \beta$, where $A \in N$ and $\beta$ is a string of symbols belonging to $(\Sigma \cup N)*$
+> $S$ is a designated start symbol.
+
+Properties:
+- a phrase can be applied independently of its context (no context on the LHS of rules; this it what it means for a grammar to be context free)
 - a phrase has its internal structure (RHS of rules)
 - phrases cannot be discontinued nor overlap
 - phrases are either disjoint or contain one another
@@ -730,13 +752,26 @@ Potential solutions:
   - frequency
   - ...
 
-##### Feature structures (unclear, note that in the example Cat stands for Category)
+##### Feature structures
 
-In general, when it comes to representing constraints, instead of introducing a whole lot of new rules we can use __*feature structures*__.
+In general, when it comes to representing constraints, instead of introducing a whole lot of new rules we can use __*feature structures*__ (more precisely, we can represent each node of our grammar with a feature structure). They are essentially feature-value pairs (e.g. $<number,singular>$), where features are atomic symbols drawn from some finite set, and values are either atomic symbols or feature structures themselves (recursion).
 
-In particular, we represent each node of our CFG as a feature structure, to which we can add constraints. We can perform unification (⊔) on such feature structures (for a graphical - matrix - representation of such features, referred to as Attribute Value Matrix, see syntax 2 slides 26+).
+Feature structures are usually represented as _attribute-value matrices_ (AVM):
 
-#### Propagating features from heads (...)
+![Recursive AVM.](avm.png)
+
+This ability to use features structures as values for features leads to the notion of _feature path_: a sequence of features leading to a particular value. For instance, int the example above, the path "AGREEMENT PERSON" leads to "3rd". This suggests that a possible implementation of feature structures is via DAGs.
+
+As shown in the example below, feature structures can be _reentrant_, meaning that two paths can lead to the same node/value/structure-as-value.
+
+![Reentrant feature structure.](reeavm.png)
+
+It is possible to perform operations on feature structures. One very important such operation is __*unification*__ $\sqcup$ (not entirely different from set union), useful both to merge the information contained in two (compatible) feature structure and to check whether they are compatible. Unification is so intuitive that we will not define it formally; two examples will suffice:
+
+![Successful unification.](unit.png)
+![Failed unification.](unif.png)
+
+Remark: feature structures can be _typed_! 
 
 ## Words, aka terminal symbols, aka Parts Of Speech (POS)
 
@@ -751,21 +786,32 @@ How to affirm that there are different classes of words and how to then classify
 
 How many and what parts of speech there are depends on the language and the grammar we intend to build. Some common choices are:
 - Nouns (divided into proper and common, countable and uncountable...)
-- Verbs (divided into transitive, intransitive and ditransitive)
+- Verbs (divided into transitive, intransitive and ditransitive, but also, based on their function, into auxiliary, modal and main)
 - Adjectives
-- Adverbs
+- Adverbs;
+  - directional and locative (place)
+  - degree
+  - manner
+  - temporal
 - Pronouns ans anaphora (e.g. itself)
-- Determiners (e.g. articles and numerals)
+- Qualifiers
+  - Numerals
+  - Determiners:
+    - Articles
+    - Demonstratives
+    - Possessives
+    - Quantifiers
 - Prepositions
 - Conjunctions
+- Particles
 
 But also:
 - Complementizers (e.g. that, for, if...)
 - Negations
-- Auxiliaries (is, do, have, to)
-- Modal verbs (will, would, shall, should, can, could)
 
-Finer distinctions (e.g. tenses for verbs), aka features in theoretical grammars, can be found in the Penn Treebank set.
+For representing subcategories, one may use _features_ (syntax: ±feature).
+
+Finer - but not excessively fine - distinctions (e.g. tenses for verbs), aka features in theoretical grammars, can be found in the Penn Treebank tagset.
 
 ## Phrases, aka non-terminal symbols
 Words associate with certain other words and form units. In order to find the constituents of a sentence, we can make use of several __tests for constituency__:
