@@ -700,8 +700,18 @@ Increasing the power of the production rules yields different “levels” of fo
 | ------------ | -------------------------------------- | ---------------------------------------- |
 | 0            | recursively enumerable (unrestrictive) | $\alpha \to \beta$                       |
 | 1            | context sensitive                      | $\alpha A \beta \to \alpha \gamma \beta$ |
+| -            | (mildly context sensitive)             |                                          |
 | 2            | context free                           | $A \to \gamma$                           |
 | 3            | regular                                | $A \to a$ and $A \to aB$                 |
+
+![Chomsky hierarchy as Venn Diagrams](chhy.png)
+
+#### Remark on MCSL
+ Mildly context sensitive grammars are a proper subset of context sensitive grammars and a proper superset of context free grammars.
+
+#### Remarks on natural language
+The fact that a language $L$ contains a subset $L'$ at "rank" $P'$ in the Chomsky hierarchy does _not_ imply that the language $L$ is also at rank $P'$. For instance, a language of type 3 can contain (as a proper subset) a language od type 2. This makes it harder to prove whether English can be modeled as a RL (the fact that we know that, say, agreement can be incorporated does not help), but there are proofs that this is not the case (based on counterexamples of the pumping lemma for RLs - see LFC notes).
+As for whether English is context free, this is still object of discussion. All proofs saying the opposite but two, based on the pumping lemma for CFLs and cross-serial dependencies, have been proved incorrect already.
 
 ### Context free grammars
 
@@ -848,17 +858,17 @@ It has to do with syntax, morphology and pragmatics.
 
 This distinction is fundamental, as language is always produced in context, and this context affects meaning. As an example, think of how the meaning of the sentence “I’d like a glass of water” varies if produced in a restaurant (command) or during a hike (desire).
 
-### Intention VS extension (Carnap)
+### Intension VS extension (Carnap)
 
-> __Intention__: similar to the meaning one can find in a dictionary, it is the set of properties that allow to specify which objects belong to a certain _extension_
+> __Intensmilar to the meaning one can find in a dictionary, it is the set of properties that allow to specify which objects belong to a certain _extension_
 
 > __Extension__: set of real world objects a word can refer to.
 
 ### Sense VS reference (Frege)
 
-> __Sense__: the thought that a sentence expresses
+> __Sense__: the thought that a sentence expresses, the mental image corresponding to a sentence (cf. _significante_, intension)
 
-> __Reference/referent__: truth value or denoted set
+> __Reference/referent__: truth value or denoted set (cf. _significato_, extension)
 
 My personal thought is that these definitions are extremely unclear. The concept is better (but not that much better) understood by example:
 
@@ -882,6 +892,7 @@ So far, the key concept of _meaning_ (which is after all the object of semantics
 - **cognitive theories**, where meaning is the link between linguistic expressions and human mental constructs (cfr. intension, sense)
   - advantages: allow to talk about hypothetical situations and to communicate our internal experience
   - disadvantage: non rigorous, informal way to describe mental structures etc.
+- **pragmatic theories**, where meaning is determined by social interactions and things we "do" by using language (e.g. making promises) 
 
 ## Compositional semantics
 
@@ -985,7 +996,7 @@ Finally, meaning can be described via thematic roles, that focus on the relation
 
 ### Denotation
 
-Names and noun phrases _denote_ denotation, denotatum, reference or semantic value (?).
+Names and noun phrases _denote_ ad denotation, denotatum, reference or semantic value (these are all synonims).
 
 Example: “Marco Aurelio” denotes a certain person named like this.
 
