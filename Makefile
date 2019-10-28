@@ -1,3 +1,2 @@
 ebook:
-	pandoc formal-to-some-extent-notes.md -o formal-to-some-extent-notes.epub && \
-	mv formal-to-some-extent-notes.epub /home/harisont/Dropbox/Applicazioni/Dropbox\ PocketBook/formal-to-some-extent-notes.epub
+	pandoc formal-to-some-extent-notes.md -o formal-to-some-extent-notes.epub --css pb_style.css --webtex=http://chart.apis.google.com/chart?cht=tx\&chs=30\&chf=bg,s,FFFFFF00\&chl=
