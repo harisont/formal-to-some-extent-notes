@@ -1,6 +1,3 @@
-% Formal-to-some-extent notes
-% Arianna Masciolini
-
 # Introduction to Formal Linguistics
 
 FL is only formal to some extent - not as a binary notion. This is due to the fact that the object of study is natural language, which is ambiguous. One must always take into account the fact that there are, then, different "levels of formality”.
@@ -113,6 +110,8 @@ The objective of NLP is to make computers perform tasks involving natural langua
 - 2000+: rise of machine learning 
 
 # Phonetics & phonology
+
+Note: this section is draftier than the rest of this draft, in the sense that I never even re-read it.
 
 ![The classical communication model](communication_model.png)
 
@@ -333,22 +332,22 @@ It's important to notice that it is even nontrivial to define what a word is, un
 
 ## Essential vocabulary
 
+- _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the _bestämd_ form of a Swedish word or the past simple of an English verb)
+
+- _Grammatical word_ = words defined in terms of their place in the paradigm, described for instance as "the past simple of verb X"
+
 - _Lexeme_ = abstract lexical entity consisting of __form + meaning__. It represents a
-  set of forms (note: this is according to the slides. I actually think that a better definition would be: “__basic unit of a language with *lexical meaning*__ consisting of one or several words, the elements of which do not separately convey the (lexical) meaning of the whole”)
+  set of forms (note: this is according to the slides. I actually think that a better definition would be: “__basic unit of a language with *lexical meaning*__ consisting of one or several words, the elements of which do not separately convey the (lexical) meaning of the whole”. An even clearer definition is: "the set of all forms that have the same meaning")
+
+- _Lemma_ = basic form that represents the set of word forms of a lexeme e.g. in a dictionary (even though I cannot unsee that this is exactly how Bauer defines lexemes...)
   
 - _Root_ = basic part of a lexeme not further analyzable either in terms of inflectional or derivational morphology, always present in every form (note: compounds have two roots)
 
 - _Stem_ = a root or a root + a derivational morpheme changing its meaning (example: “deduce” is a stem but not a root, as it can be analysed in terms of “de” + “duce”)
 
-- _Lemma_ = basic form that represents the word e.g. in a dictionary (even though I cannot unsee that this is exactly how Bauer defines lexemes...)
-
-- _Word form_ or _orthographic word_ = a certain form of a certain lemma (e.g. the feminine form of an adjective in Italian, the _bestämd_ form of a Swedish word or the past simple of an English verb)
-
-- _Grammatical word_ = words defined in terms of their place in the paradigm, described for instance as "the past simple of verb X"
-
 - _String_ = sequence of characters
 
-- _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). According to Bauer, this is actually how you define _morphs_, but as we will see later most sources agree on the fact that a morph is, instead, the _phonetic_ realization of that morpheme. They are divided into:
+- _Morpheme_ = smallest meaningful unit (of a word). By _meaningful_, we refer both to lexical and grammatical meaning (see below), e.g. the word “unfair” is composed of two morphemes (“un” + “fair”). According to Bauer, this is actually how you define _morphs_, but as we will see later most sources agree on the fact that a morph is, instead, the _phonetic_ realization of that morpheme. They are divided into:
   - _free_ (standalone) morphemes
   - _bound_ morphemes (the _base_ of a word is the part to which bound morphemes are attached): 
     - _roots_
@@ -610,7 +609,7 @@ More formally,
 > - $\Sigma$ is the (finite) _input_ alphabet
 > - $\Delta$ is the (finite) _output_ alphabet
 > - $\delta : Q \times \Sigma * \to P(Q)$, where $|P(Q)| = 2^Q$, is the transition function that returns not a single state but a _set_ of states
-> - $\sigma : Q \times \Sigma * \to P(\Delta)$, where $|P(Q)| = 2^Q$, is the _output function_, which gives the set of possible output strings for each state and input
+> - $\sigma : Q \times \Sigma * \to P(\Delta*)$, where $|P(Q)| = 2^Q$, is the _output function_, which gives the set of possible output strings for each state and input
 
 Note that transducers as described above are nondeterministic. _Sequential_ transducers are their deterministic counterpart, but there is no general w'90
 determinization algorithm, in contrast with FSAs.
@@ -689,6 +688,7 @@ In the context of FGs, language are defined via __derivation__, which consists i
 ### Normal forms
 It is sometimes useful to have a normal form for grammars.
 One such normal form is the __Chomsky Normal Form__. Its characteristics are:
+
 1. $\epsilon$-free
 2. productions in the forms:
   - $A \to BC$
