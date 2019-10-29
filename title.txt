@@ -1,0 +1,6 @@
+---
+title: Formal-to-some-extent notes
+author: Arianna Masciolini
+language: en-US
+cover-image: cover.png
+...
