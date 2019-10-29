@@ -10,21 +10,21 @@ It has to do with syntax, morphology and pragmatics.
 
 > __Utterance__ = unrepeatable speech/writing event that happens at a particular point in time, speech or writing event intended as a physical event.
 
-> __Sentence__ = linguist’s abstraction from an utterance
+> __Sentence__ = linguist’s abstraction from an utterance.
 
 This distinction is fundamental, as language is always produced in context, and this context affects meaning. As an example, think of how the meaning of the sentence “I’d like a glass of water” varies if produced in a restaurant (command) or during a hike (desire).
 
 ### Intension VS extension (Carnap)
 
-> __Intension__: similar to the meaning one can find in a dictionary, it is the set of properties that allow to specify which objects belong to a certain _extension_
+> __Intension__: similar to the meaning one can find in a dictionary, it is the set of properties that allow to specify which objects belong to a certain _extension_.
 
 > __Extension__: set of real world objects a word can refer to.
 
 ### Sense VS reference (Frege)
 
-> __Sense__: the thought that a sentence expresses, the mental image corresponding to a sentence (cf. _significante_, intension)
+> __Sense__: the thought that a sentence expresses, the mental image corresponding to a sentence (cf. _significante_, intension).
 
-> __Reference/referent__: truth value or denoted set (cf. _significato_, extension)
+> __Reference/referent__: truth value or denoted set (cf. _significato_, extension).
 
 My personal thought is that these definitions are extremely unclear. The concept is better (but not that much better) understood by example:
 
@@ -48,7 +48,7 @@ So far, the key concept of _meaning_ (which is after all the object of semantics
 - **cognitive theories**, where meaning is the link between linguistic expressions and human mental constructs (cfr. intension, sense)
   - advantages: allow to talk about hypothetical situations and to communicate our internal experience
   - disadvantage: non rigorous, informal way to describe mental structures etc.
-- **pragmatic theories**, where meaning is determined by social interactions and things we "do" by using language (e.g. making promises) 
+- **pragmatic theories**, where meaning is determined by social interactions and things we "do" by using language (e.g. making promises).
 
 ## Compositional semantics
 
@@ -56,7 +56,7 @@ _Compositional_ semantics deals with meaning of well formed _sentences_ (not the
 
 The __principle of compositionality__ is the following:
 
-> The meaning of a complex expression is determined by the meanings of its constituent expressions and the rules used to combine them
+> The meaning of a complex expression is determined by the meanings of its constituent expressions and the rules used to combine them.
 
 ## Lexical relations between words
 
@@ -64,7 +64,7 @@ We define meanings in terms of other words, e.g.:
 
 - Spaniel: type of _dog_ (hyponymy, there is also hyperonymy)
 - Dark: opposite of _light_ (antonymy)
-- Honest: same as _truthful_ (synonymy)
+- Honest: same as _truthful_ (synonymy).
 
 In the next few sections, we will examine these and some more possible relationships.
 
@@ -91,7 +91,7 @@ Some words are gradable, so, so to say “double negation does not hold” (in a
 
 > Inclusion relationship
 
-Waltzing $\subset$ dancing $\subset$ moving
+Waltzing  $\subset$  dancing  $\subset$  moving
 
 ### Homophony
 
@@ -168,7 +168,7 @@ We can model _entailment_ like in formal logic. For example, from “The Queen o
 - **Existential**: “The Queen of the UK is wearing a hat” <- “There exists a Queen of England”
 - **Aspectual**: “I just stopped reading” <- “I have been reading”
 - **Iterative**: “He returned to Cambridge” <- “He had been in Cambridge before” or “He said no again” <- “He already had said no”
-- **Implicative**: “Kokoro Fuji managed to top the boulder” <- “He was trying to top the boulder”
+- **Implicative**: “Kokoro Fuji managed to top the boulder” <- “He was trying to top the boulder”.
 
 #### Conversational implicature
 

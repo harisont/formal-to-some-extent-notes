@@ -54,8 +54,10 @@ Increasing the power of the production rules yields different “levels” of fo
 | 0            | recursively enumerable (nonrestrictive) | $\alpha \to \beta$                       |
 | 1            | context sensitive                      | $\alpha A \beta \to \alpha \gamma \beta$ |
 | -            | (mildly context sensitive)             |                                          |
-| 2            | context free                           | $A \to \gamma$                           |
+| 2            | context free                           | $A \to \alpha$                           |
 | 3            | regular                                | $A \to a$ and $A \to aB$                 |
+
+Note that greek letters represent strings made of terminal and nonterminal symbols, and $\gamma \neq \epsilon$
 
 ![Chomsky hierarchy as Venn Diagrams](chhy.png)
 
@@ -69,12 +71,13 @@ As for whether English is context free, this is still object of discussion. All 
 ### Context free grammars
 
 Formal definition:
+
 > A CFG is a 4-uple $<N, \Sigma, P, S>$ where
 > 
 > - $N$ is a set of _nonterminal symbols_ or _variables_
 > - $\Sigma$ is a set of _terminal symbols_ (note that these two sets are disjunct)
 > - $R$ is a set of _rules_ or _productions_ in the form $A \to \beta$, where $A \in N$ and $\beta$ is a string of symbols belonging to $(\Sigma \cup N)*$
-> $S$ is a designated start symbol.
+> - $S$ is a designated start symbol.
 
 Properties:
 

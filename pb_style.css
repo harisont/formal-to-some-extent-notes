@@ -13,3 +13,7 @@ image {
     margin-right: auto;
     width: 650px;
 }
+
+blockquote {
+    border: medium;
+}

@@ -119,7 +119,7 @@ Languages are grouped into categories based on morphology:
 It’s often useful to talk about morphology and syntax together (__*morphosyntax*__) because some things are expressed morphologically in a language and syntactically in another. 
 
 #### Grammar
-One could also argue that syntax and morphology are so closely related that they should not be distinguished one from the other. Assuming this, we shall talk instead of __*grammar*__ (i.e. syntax + morphology). Traditional (classical) grammar tends adopt a _prescriptive_ approach. Nowadays, however a descriptive approach is preferred, based on the analysis of collections of real-world language samples. 
+One could also argue that syntax and morphology are so closely related that they should not be distinguished one from the other. Assuming this, we shall talk instead of __*grammar*__ (i.e. syntax + morphology). Traditional (classical) grammar tends adopt a _prescriptive_ approach. Nowadays, however, a descriptive approach is preferred, based on the analysis of collections of real-world language samples. 
 
 ##### Structural analysis
 One of the methods applied by those who follow a descriptive approach is called _structural analysis_. It investigates the distribution of forms in a language by checking what forms can fit certain "test frames". Example:
@@ -134,12 +134,13 @@ This (descriptive) technique is designed to show how small constituents form lar
 
 Using this kind of diagrams helps us understanding the types of form that can be substituted for each other at different levels, but also, at a higher level, to work out the grammatical functions of phrases (for instance, in the diagram above "This tree" is a Noun Phrase whose role is to be the subject).
 
-
 ### Lexicon
 
 Lexicon should perhaps be considered alongside morphology and syntax. We shall define lexicon later on, but for now let’s just say that according to one possible (and rather broad) its “units”, called _lexical entries_ are idealized mental constructs such as the syntactic pattern “PREPOSITION + NOUN PHRASE” in English.
 
 ## Computational morphology
+
+Note: this section really shows you how weird it is to consider Syntax and Morphology as two separated fields. Almost everything we call "Computational Morphology" could in fact be moved to the chapter on Syntax. 
 
 ### Formal languages
 
@@ -150,7 +151,7 @@ Lexicon should perhaps be considered alongside morphology and syntax. We shall d
 A formal definition of regular languages:
 
 - the empty language is a RL
-- $\forall a \in \Sigma \cup \epsilon, {a}$ is a RL
+- $\forall a \in \Sigma \cup \epsilon, {a}$ is a RL (where $\Sigma$ is the _alphabet_ of the language)
 - if $L_1$ and $L_2$ are RLs, then so are
   - $L_1 \cdot L_2 = {xy | x \in L_1, y \in L_2}$ (_concatenation_)
   - $L_1 \cup L_2$ (_union_ or _disjunction_)
@@ -159,8 +160,8 @@ A formal definition of regular languages:
 Regular languages are also closed under the following operations:
 
 - intersection $\cap$
-- difference between languages $-$
-- complementation between $\Sigma*$ and the language $-$
+- difference between languages
+- complementation between $\Sigma*$ and the language
 - reversal $^{R}$ 
 
 ### Regular expressions
@@ -297,15 +298,16 @@ More formally,
 > - $\delta : Q \times \Sigma * \to P(Q)$, where $|P(Q)| = 2^Q$, is the transition function that returns not a single state but a _set_ of states
 > - $\sigma : Q \times \Sigma * \to P(\Delta*)$, where $|P(Q)| = 2^Q$, is the _output function_, which gives the set of possible output strings for each state and input
 
-Note that transducers as described above are nondeterministic. _Sequential_ transducers are their deterministic counterpart, but there is no general w'90
-determinization algorithm, in contrast with FSAs.
+Beware of the functions: the domain of $\delta$ and $\sigma$ is __not__ $Q \times \Sigma$ but $Q \times \Sigma*$! So, with respect to FSAs, these two functions are more like $\hat{\delta}$ than they are like $\delta$.
+
+Also, note that transducers as described above are nondeterministic. _Sequential_ transducers are their deterministic counterpart, but there is no general determinization algorithm, in contrast with FSAs.
 
 Such a machine can be interpreted as:
 
 - a __recognizer__, taking a pair of strings as input and output "accept" or "reject" depending on if the pair belongs to the string-pair language
 - a __generator__ outputting pairs of strings of the language
 - a __translator__ that takes a string as input and outputs another
-- a __set relater__
+- a __set relater__.
 
 Seen as a translator, it is useful to build _morphological parsers_. They require:
 
@@ -334,5 +336,5 @@ The (resp. upper and lower) _projection_ of a FST is the FSA obtained by extract
   - lemmatization
   - morphological analysis (morphological parsing, disambiguation)
   - inflectional & derivational morphology (example: nominalization of verbs)
-- bidirectional (allows both analysis and synthesis)
+- bidirectional (allows both analysis and synthesis).
 
